@@ -486,7 +486,7 @@ pattern img {
   font-weight: bold;
 }
 .content .brand-table table tr:nth-child(-n+3), .content .brand-table table tr:nth-child(7), .content .brand-table table tr:nth-child(8) {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 .content .buy-table table {
   width: 100%;
@@ -514,7 +514,7 @@ pattern img {
   font-weight: bold;
 }
 .content .buy-table table tr:nth-child(even) {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .product {
@@ -844,7 +844,7 @@ search div {
   height: 35px;
   background-color: var(--bg-color);
   z-index: 900;
-  border: 0.2px solid rgb(83, 76, 76);
+  border: 0.2px solid #534c4c;
   border-radius: 10px;
   padding: 0.5em;
 }
@@ -981,19 +981,23 @@ form input[type=checkbox]:checked + label {
   border: 2px solid white;
 }
 
-::-webkit-scrollbar { /* width */
+::-webkit-scrollbar {
+  /* width */
   width: 10px;
 }
 
-::-webkit-scrollbar-track { /* Track */
+::-webkit-scrollbar-track {
+  /* Track */
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb { /* Handle */
+::-webkit-scrollbar-thumb {
+  /* Handle */
   background: black;
 }
 
-::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* Handle on hover */
   background: black;
 }
 
@@ -1021,9 +1025,11 @@ video::-moz-media-controls-start-playback-button {
   header nav a:nth-last-child(-n+5) {
     display: none;
   }
+
   header nav a:first-child {
     display: none;
   }
+
   mobilemenu a:nth-last-child(3) {
     display: block;
   }
@@ -1032,6 +1038,7 @@ video::-moz-media-controls-start-playback-button {
   article, blog, cocktails, .content {
     width: 90%;
   }
+
   .spoiler {
     width: calc(100% - 1px);
     margin: 2em 0 0 0;
@@ -1042,15 +1049,19 @@ video::-moz-media-controls-start-playback-button {
   .spoiler .spoiler-content img {
     width: 60%;
   }
+
   .info-cockt {
     width: 90%;
   }
+
   principe div {
     width: 70%;
   }
+
   header, footer {
     max-width: 90%;
   }
+
   footer div {
     flex-direction: column;
   }
@@ -1060,10 +1071,12 @@ video::-moz-media-controls-start-playback-button {
   footer nav a {
     padding: 0.3rem;
   }
+
   heyibri {
     width: 1600px;
     max-width: 90%;
   }
+
   block {
     width: 1600px;
     max-width: 90%;
@@ -1076,9 +1089,11 @@ video::-moz-media-controls-start-playback-button {
   header nav menu {
     display: flex;
   }
+
   header nav a:nth-last-child(-n+8) {
     display: none;
   }
+
   mobilemenu a:nth-child(n+1) {
     display: block;
   }
@@ -1094,6 +1109,7 @@ video::-moz-media-controls-start-playback-button {
   heyibri img {
     height: 50vh;
   }
+
   .error {
     width: 90%;
     padding: 0;
@@ -1101,6 +1117,7 @@ video::-moz-media-controls-start-playback-button {
   .error img {
     width: 100%;
   }
+
   .info-cockt {
     width: 90%;
   }
@@ -1112,9 +1129,11 @@ video::-moz-media-controls-start-playback-button {
   .info-cockt .img-info {
     display: none;
   }
+
   tags {
     font-size: 0.9em;
   }
+
   block {
     flex-direction: column;
   }
@@ -1139,6 +1158,7 @@ video::-moz-media-controls-start-playback-button {
     border-radius: 20px;
     background-color: white;
   }
+
   .content .brand-table table {
     font-size: 0.8em;
   }
@@ -1152,6 +1172,7 @@ video::-moz-media-controls-start-playback-button {
   .content img, .content video {
     width: 100%;
   }
+
   footer {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -1178,6 +1199,7 @@ video::-moz-media-controls-start-playback-button {
   footer a {
     justify-content: center;
   }
+
   principe div {
     width: 90%;
   }
@@ -1187,6 +1209,7 @@ video::-moz-media-controls-start-playback-button {
   principe p {
     width: 100%;
   }
+
   cocktails {
     margin: 5em 0 0 0;
   }
@@ -1208,6 +1231,7 @@ video::-moz-media-controls-start-playback-button {
   cocktails .cockt table {
     width: 90%;
   }
+
   blog {
     flex-wrap: nowrap;
     flex-direction: column;
@@ -1217,6 +1241,7 @@ video::-moz-media-controls-start-playback-button {
   blog div {
     width: 100%;
   }
+
   header {
     max-width: 90%;
   }
@@ -1226,6 +1251,7 @@ video::-moz-media-controls-start-playback-button {
   header a {
     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
   }
+
   form label {
     padding: 2px 4px;
   }
