@@ -68,7 +68,7 @@ class Page404 extends Page {
   body() {
     const tit = `Ошбика: 404`
     const desc = `Ошбика 404`
-    const img = `https://drinkibri.ru/images/404.jpg`
+    // const img = `https://drinkibri.ru/images/404.jpg`
     return Layout(tit, desc, img,
       Nav(this),
       E.main.chi(
@@ -89,26 +89,22 @@ class PageIndex extends Page {
   title() {return `Главная`}
 
   body() {
-  const tit = `Ibri`
-  const desc = `Ибри (Ibri) — авторские газированные напитки. Продукт бренда Ибри, идея Ибри.`
-  const img = `https://drinkibri.ru/images/ibri-title.jpg`
+  const tit = `Д.С. цитаты`
+  const desc = `Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`
+  const img = `https://sirseverin.ru/statham/images/statham.jpg`
     return Layout(tit, desc, img,
-      Nav(this),
+      // Nav(this),
       E.main.chi(
         E.heyibri.chi(
-          // E.h1.chi(E.span.chi(`Ибри`), ` — это ещё и вкусный напиток`),
-          E.img.props({src: `/images/ibri-title.jpg`, alt: `Ibri`}),
-          E.div.chi(`Приветствуем тебя на сайте напитков Ибри! :)`)
+          E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
+          E.img.props({src: `/images/statham.png`, alt: `Statham`}),
+          // E.div.chi(`Джейсон Стетхем — великий русский поэт, а здесь его цитаты`)
         ),
         E.block.chi(
           E.div.props({class: `block-info`}).chi(
-            E.h2.chi(`Идея`),
-            E.a.props({href: `/brand`}).chi(`Подробнее`),
-            E.div.chi(Md(`./data/idea.md`)).props({class: `idea`}),
+            E.h2.chi(`Цитаты`),
+            E.div.chi(Md(`./data/quotes.md`)).props({class: `idea`}),
           ),
-          E.div.props({class: `idea-ingri`}).chi(
-            getItem(data.brand)
-          )
         ),
       ),
       Footer(this)
@@ -144,21 +140,21 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({name: `viewport`, content: `width=device-width, initial-scale=1`}),
         E.title.chi(tit),
         E.meta.props({name: `description`, content: desc}),
-        E.meta.props({name: `keywords`, content: `газированные напитки, коктейли, натуральные напитки, миксология`}),
+        E.meta.props({name: `keywords`, content: `цитаты, Джэйсон Стэтхем, цитаты Джэйсон Стэтхем`}),
         E.meta.props({property: `og:title`, content: tit}),
         E.meta.props({property: `og:description`, content: desc}),
         E.meta.props({property: `og:type`, content: `website`}),
         E.meta.props({property: `og:site_name`, content: `drinkibri.ru`}),
-        E.meta.props({property: `og:url`, content: `https://drinkibri.ru/`}),
+        // E.meta.props({property: `og:url`, content: `https://drinkibri.ru/`}),
         E.meta.props({property: `og:image`, content: img}),
         E.meta.props({property: `og:image:height`, content: `600`}),
         E.meta.props({property: `og:image:width`, content: `300`}),
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
-        E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/ibri-icon.png`}),
+        // E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/ibri-icon.png`}),
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,0..1,0..100&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
-        Md(`./data/anal.md`)
+        // Md(`./data/anal.md`)
       ),
       E.body.chi(chi, 
         E.div.props({class: `popup`, id: `popup`}).chi(
@@ -193,16 +189,14 @@ function NavFooter(page) {
     )
 }
 const currentYear = new Date().getFullYear();
+
 function Footer(page) {
   return E.footer.props({id: `footer`}).chi(
-    E.img.props({alt: `Ibri`, src: `/images/ibri-logo-white.svg`}),
-    E.p.chi(`Ibri® — все права защищены. Любое использование либо копирование материалов сайта, 
-      допускается только cо ссылкой на источник`),
+    E.p.chi(`Данный сайт сделан в юмористических целях. Весь материал собран из открытых источников сети интернета`),
       E.div.chi(
         Contact(data.contact)
       ),
-      NavFooter(page),
-    E.span.chi(E.a.props({href: `https://github.com/diatom/ibri`}).
+    E.span.chi(E.a.props({href: `https://github.com/diatom/statham`}).
     chi(`© ${currentYear}. Сайт сделал Severin B. 👾`)
     )
   )
