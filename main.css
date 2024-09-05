@@ -1,5 +1,4 @@
 body {
-  background-color: #EEEEEE;
   color: var(--text-color);
   padding: 0 0;
   margin: 0;
@@ -135,21 +134,19 @@ heyibri {
   padding: 0;
   margin: 2.5em 0 5em 0;
   justify-content: flex-start;
-  flex-direction: column;
-  width: 1340px;
+  width: 1000px;
   max-width: 90%;
 }
 heyibri img {
-  width: 100%;
+  width: 60%;
   max-height: 650px;
   object-fit: cover;
   border-radius: 10px;
 }
 heyibri h1 {
-  font-size: 3em;
+  font-size: 2em;
   margin: 2em 0 1em 0;
   padding: 0;
-  color: #3A7189;
   max-width: 70%;
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
@@ -163,14 +160,14 @@ heyibri div {
 
 footer {
   flex-wrap: wrap;
-  height: 22rem;
-  width: 1340px;
+  height: 10rem;
+  width: 1000px;
   max-width: 90%;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  background: #000000;
-  color: white;
+  background: #CAC1FF;
+  color: black;
   font-size: 0.9em;
   padding: 1.5rem 0 0 0;
   margin: 5em 0 2em 0;
@@ -187,10 +184,10 @@ footer div, footer nav {
 footer a {
   margin: 0;
   padding: 0.3rem 1rem 0.3rem 1rem;
-  color: white;
+  color: black;
 }
 footer a:hover {
-  text-decoration: underline 1px solid white;
+  text-decoration: underline 1px solid black;
 }
 footer p {
   width: 20rem;
@@ -204,18 +201,17 @@ footer span {
 }
 
 block {
-  width: 1340px;
+  width: 1000px;
   max-width: 90%;
   height: auto;
   border-radius: 10px;
   display: flex;
   justify-content: left;
   flex-direction: row;
-  margin: 5em 0;
+  margin: 2em 0;
 }
 block .block-info {
-  width: 40em;
-  max-width: 30%;
+  max-width: 100%;
 }
 block .block-info a {
   width: 10em;
@@ -1102,12 +1098,17 @@ video::-moz-media-controls-start-playback-button {
   heyibri {
     width: 90%;
     margin-bottom: 0;
+    flex-direction: column;
+    margin: 0;
   }
   heyibri h1 {
     font-size: 1.8em;
+    max-width: 100%;
+    margin: 2em 0;
   }
   heyibri img {
-    height: 50vh;
+    width: 100%;
+    margin: 0 0 2em 0;
   }
 
   .error {
@@ -1198,6 +1199,7 @@ video::-moz-media-controls-start-playback-button {
   }
   footer a {
     justify-content: center;
+    text-align: center;
   }
 
   principe div {
