@@ -68,9 +68,8 @@ class Page404 extends Page {
   body() {
     const tit = `Ошбика: 404`
     const desc = `Ошбика 404`
-    // const img = `https://drinkibri.ru/images/404.jpg`
+    const img = `https://sirseverin.ru/statham/images/404.jpg`
     return Layout(tit, desc, img,
-      Nav(this),
       E.main.chi(
         E.a.props({href: `/`, class: `error`}).chi(
           E.h1.chi(this.title()),
