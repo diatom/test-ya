@@ -4,55 +4,26 @@ console.log(`The site was made by Severin B. https://sirseverin.ru/
 ༼ つ ◕_◕ ༽つ
 `)
 
-// Menu
-document.addEventListener('DOMContentLoaded', function() {
-  const menuIcon = document.querySelector('menu')
-  const mobileMenu = document.querySelector('mobilemenu')
-  menuIcon.addEventListener('click', function() {
-    if (mobileMenu.style.display === 'flex') {
-      mobileMenu.style.display = 'none'
-    } else {
-      mobileMenu.style.display = 'flex'
-    }
-  })
-  mobileMenu.addEventListener('click', function(e) {
-    if (e.target === mobileMenu) {
-      mobileMenu.style.display = 'none'
-    }
-  })
-  document.addEventListener('click', function(e) {
-    if (mobileMenu.style.display === 'flex' && e.target !== mobileMenu && !menuIcon.contains(e.target)) {
-      mobileMenu.style.display = 'none'
-    }
-  })
-})
 
-// Popup image
-const images = document.querySelectorAll('article img, .cockt img, .spoiler img, .content img, .mixology-img img, .i-ingri-img img')
-const popup = document.getElementById('popup')
-const popupImage = document.getElementById('popupImage')
-const closeBtn = document.getElementById('closeBtn')
+// URL button copy
+document.querySelectorAll('.copy-b').forEach(button => {
+  button.addEventListener('click', () => {
+    const parentDiv = button.closest('.quote') // Получаем родительский div
+    const divId = parentDiv.id // Получаем ID родительского div
+    const currentUrl = window.location.href // Получаем текущий URL
+    const textToCopy = `${currentUrl}#${divId}` // Формируем текст для копирования
 
-images.forEach(image => {
-  image.addEventListener('click', () => {
-      popupImage.src = image.src
-      popup.style.display = 'flex'
+    // Используем Clipboard API для копирования текста
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        console.log('Текущий адрес и ID скопированы в буфер обмена!')
+        alert('Скопировано: ' + textToCopy) // Уведомление для пользователя
+      })
+      .catch(err => {
+        console.error('Ошибка при копировании: ', err)
+      })
   })
 })
-closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none'
-})
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    popup.style.display = 'none'
-  }
-})
-popup.addEventListener('click', (e) => {
-    if (e.target === popup) {
-        popup.style.display = 'none'
-    }
-})
-
 
 // Tags button
 if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {
@@ -99,28 +70,6 @@ if (window.location.pathname.startsWith('/post') || window.location.pathname ===
   })
 }
 
-// Product press cocktails
-document.addEventListener('DOMContentLoaded', function() {
-  const cocktButtons = document.querySelectorAll('.a-cockt')
-  cocktButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const buttonId = this.id
-      localStorage.setItem('buttonToPress', buttonId)
-      window.location.href = '/mixology'
-    })
-  })
-})
-document.addEventListener('DOMContentLoaded', function() {
-  const buttonToPressId = localStorage.getItem('buttonToPress')
-  if (buttonToPressId) {
-    const buttonToPress = document.getElementById(buttonToPressId)
-    if (buttonToPress) {
-      buttonToPress.click()
-    }
-    localStorage.removeItem('buttonToPress')
-  }
-})
-
 // Search
 if (window.location.pathname === `/mixology`) {
   const searchInput = document.getElementById(`searchInput`)
@@ -148,22 +97,5 @@ if (window.location.pathname === `/mixology`) {
         document.getElementById(`searchButton`).dispatchEvent(new Event(`click`))
         event.preventDefault()
     }
-  })
-}
-
-// Spoiler 
-if (window.location.pathname === `/mixology`) {
-  document.querySelectorAll('.spoiler-header').forEach(header => {
-    header.addEventListener('click', () => {
-      header.classList.toggle('active')
-      const content = header.nextElementSibling
-      if (content.style.display === 'block') {
-        content.style.display = 'none'
-        header.querySelector('.toggle-icon').textContent = '▶'
-      } else {
-        content.style.display = 'block'
-        header.querySelector('.toggle-icon').textContent = '▼'
-      }
-    })
   })
 }
