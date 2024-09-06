@@ -98,7 +98,7 @@ class PageIndex extends Page {
         E.hey.chi(
           E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
           E.img.props({src: `/images/statham.png`, alt: `Statham`}),
-          // E.div.chi(`Джейсон Стетхем — великий русский поэт, а здесь его цитаты`)
+          E.div.chi(`18+`)
         ),
         E.block.chi(
           E.div.props({class: `block-info`}).chi(
