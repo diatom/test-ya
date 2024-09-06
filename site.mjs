@@ -10,6 +10,7 @@ import * as l from './live.mjs'
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
 
 import * as data from './data/data.js';
+import * as qoutes from './data/qoutes.js';
 
 const {E} = new p.Ren(dg.document).patchProto(dg.glob.Element)
 
@@ -94,15 +95,15 @@ class PageIndex extends Page {
     return Layout(tit, desc, img,
       // Nav(this),
       E.main.chi(
-        E.heyibri.chi(
-          E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
+        E.hey.chi(
+          E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
           E.img.props({src: `/images/statham.png`, alt: `Statham`}),
           // E.div.chi(`Джейсон Стетхем — великий русский поэт, а здесь его цитаты`)
         ),
         E.block.chi(
           E.div.props({class: `block-info`}).chi(
-            E.h2.chi(`Цитаты`),
-            E.div.chi(Md(`./data/quotes.md`)).props({class: `idea`}),
+            E.h2.chi(`Цитаты Джейсона Стетхема`),
+            getItem(qoutes.q)
           ),
         ),
       ),
@@ -111,12 +112,13 @@ class PageIndex extends Page {
   }
 }
 function getItem(a) {
-  return a.map((val) => {
-    return E.div.props({class: `i-ingri`}).chi(
-      E.div.props({class: `i-ingri-img`}).chi(E.img.props({src: val.src, alt: val.name})),
-      E.h3.chi(val.name)
-    )
-  })
+  return E.div.chi(
+    a.map((val) => {
+      return E.div.props({class: `quote`, id: a.indexOf(val)}).chi(E.button.chi(
+        E.img.props({src: `images/anchor.svg`, alt: `anchor`, class: `a-svg`})
+      ).props({class: `copy-b`}), val)
+    })
+)
 }
 
 
@@ -149,19 +151,13 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:image:height`, content: `600`}),
         E.meta.props({property: `og:image:width`, content: `300`}),
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
-        // E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/ibri-icon.png`}),
+        E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.ico`}),
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,0..1,0..100&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
         // Md(`./data/anal.md`)
       ),
-      E.body.chi(chi, 
-        E.div.props({class: `popup`, id: `popup`}).chi(
-          E.span.props({class: `close`, id: `closeBtn`}).chi(`☓`),
-          E.div.props({class: `popup-content`}).chi(
-          E.img.props({id: `popupImage`, src: ` `, alt: `Popup Image`})
-        ))
-      ),
+      E.body.chi(chi),
       E.script.props({type: `module`, src: `/browser.mjs`, defer: ``}),
       // E.script.props({type: `module`, src: `/site.mjs`}),
       a.vac(DEV) && E.script.props({type: `module`, src: l.LIVE_CLIENT}),
@@ -191,7 +187,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer(page) {
   return E.footer.props({id: `footer`}).chi(
-    E.p.chi(`Данный сайт сделан в юмористических целях. Весь материал собран из открытых источников сети интернета`),
+    E.p.chi(`Материал предназначен для лиц старше 18 лет. Данный сайт сделан в юмористических целях. Весь материал собран из открытых источников сети интернета`),
       E.div.chi(
         Contact(data.contact)
       ),
