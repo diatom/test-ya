@@ -15,87 +15,87 @@ document.querySelectorAll('.copy-b').forEach(button => {
 
     // Используем Clipboard API для копирования текста
     navigator.clipboard.writeText(textToCopy)
-      .then(() => {
-        console.log('Текущий адрес и ID скопированы в буфер обмена!')
-        alert('Скопировано: ' + textToCopy) // Уведомление для пользователя
-      })
-      .catch(err => {
-        console.error('Ошибка при копировании: ', err)
-      })
+      // .then(() => {
+      //   console.log('Текущий адрес и ID скопированы в буфер обмена!')
+      //   alert('Скопировано: ' + textToCopy) // Уведомление для пользователя
+      // })
+      // .catch(err => {
+      //   console.error('Ошибка при копировании: ', err)
+      // })
   })
 })
 
 // Tags button
-if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {
-  document.addEventListener('DOMContentLoaded', function() {
-    const tagsContainer = document.querySelector('tags')
-    const buttons = tagsContainer.querySelectorAll('button[type="button"]')
-    const blogDivs = document.querySelectorAll('.filter, .cockt')
-    const activeTags = new Set()
+// if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {
+//   document.addEventListener('DOMContentLoaded', function() {
+//     const tagsContainer = document.querySelector('tags')
+//     const buttons = tagsContainer.querySelectorAll('button[type="button"]')
+//     const blogDivs = document.querySelectorAll('.filter, .cockt')
+//     const activeTags = new Set()
 
-    buttons.forEach(button => {
-      button.addEventListener('click', function() {
-        const buttonTag = this.innerText.trim().toLowerCase()
+//     buttons.forEach(button => {
+//       button.addEventListener('click', function() {
+//         const buttonTag = this.innerText.trim().toLowerCase()
 
-        if (activeTags.has(buttonTag)) {
-          activeTags.delete(buttonTag)
-        } else {
-          activeTags.add(buttonTag)
-        }
+//         if (activeTags.has(buttonTag)) {
+//           activeTags.delete(buttonTag)
+//         } else {
+//           activeTags.add(buttonTag)
+//         }
 
-        blogDivs.forEach(div => {
-          const divButtons = div.querySelectorAll('arttags button[type="button"]')
-          const divTags = Array.from(divButtons).map(btn => btn.innerText.trim().toLowerCase())
+//         blogDivs.forEach(div => {
+//           const divButtons = div.querySelectorAll('arttags button[type="button"]')
+//           const divTags = Array.from(divButtons).map(btn => btn.innerText.trim().toLowerCase())
 
-          const shouldShow = Array.from(activeTags).every(tag => divTags.includes(tag))
+//           const shouldShow = Array.from(activeTags).every(tag => divTags.includes(tag))
 
-          if (shouldShow) {
-            div.style.display = 'block'
-          } else {
-            div.style.display = 'none'
-          }
-        })
-      })
-    })
-  })
+//           if (shouldShow) {
+//             div.style.display = 'block'
+//           } else {
+//             div.style.display = 'none'
+//           }
+//         })
+//       })
+//     })
+//   })
 
-  document.addEventListener(`DOMContentLoaded`, function() {
-    var buttons = document.querySelectorAll(`.btn`)
+//   document.addEventListener(`DOMContentLoaded`, function() {
+//     var buttons = document.querySelectorAll(`.btn`)
 
-    buttons.forEach(function(button) {
-      button.addEventListener(`click`, function() {
-        button.classList.toggle(`active`)
-      })
-    })
-  })
-}
+//     buttons.forEach(function(button) {
+//       button.addEventListener(`click`, function() {
+//         button.classList.toggle(`active`)
+//       })
+//     })
+//   })
+// }
 
-// Search
-if (window.location.pathname === `/mixology`) {
-  const searchInput = document.getElementById(`searchInput`)
-  const searchButton = document.getElementById(`searchButton`)
+// // Search
+// if (window.location.pathname === `/mixology`) {
+//   const searchInput = document.getElementById(`searchInput`)
+//   const searchButton = document.getElementById(`searchButton`)
 
-  function searchDataBook(input) {
-    const divs = document.getElementsByClassName(`cockt`)
-    for (const elem of divb) {
-      let result = elem.innerHTML.toLowerCase().includes(input)
-      if (result) {
-        elem.hidden = false
-      } else {
-        elem.hidden = true
-      } 
-    }
-  }
-  searchButton.addEventListener(`click`, () => {
-    const userInput = searchInput.value.toLowerCase()
-    searchDataBook(userInput)
-  })
+//   function searchDataBook(input) {
+//     const divs = document.getElementsByClassName(`cockt`)
+//     for (const elem of divb) {
+//       let result = elem.innerHTML.toLowerCase().includes(input)
+//       if (result) {
+//         elem.hidden = false
+//       } else {
+//         elem.hidden = true
+//       } 
+//     }
+//   }
+//   searchButton.addEventListener(`click`, () => {
+//     const userInput = searchInput.value.toLowerCase()
+//     searchDataBook(userInput)
+//   })
 
-  // Enter click
-  document.addEventListener(`keydown`, function(event) {
-    if (event.key === `Enter`) {
-        document.getElementById(`searchButton`).dispatchEvent(new Event(`click`))
-        event.preventDefault()
-    }
-  })
-}
+//   // Enter click
+//   document.addEventListener(`keydown`, function(event) {
+//     if (event.key === `Enter`) {
+//         document.getElementById(`searchButton`).dispatchEvent(new Event(`click`))
+//         event.preventDefault()
+//     }
+//   })
+// }
