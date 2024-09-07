@@ -6,12 +6,12 @@
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(97912059, "init", {
+   ym(98266384, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true
    });
-</script><noscript><div><img src="https://mc.yandex.ru/watch/97912059" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</script><noscript><div><img src="https://mc.yandex.ru/watch/98266384" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <!-- Yandex Webmaster -->
-<meta name="yandex-verification" content="863bb12712f44b97" />
+<meta name="yandex-verification" content="d5a62848bcfac33f" />

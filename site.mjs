@@ -69,12 +69,12 @@ class Page404 extends Page {
   body() {
     const tit = `Ошбика: 404`
     const desc = `Ошбика 404`
-    const img = `https://sirseverin.ru/statham/images/404.jpg`
+    const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
       E.main.chi(
         E.a.props({href: `/`, class: `error`}).chi(
           E.h1.chi(this.title()),
-          E.img.props({alt: `404`, src: `/images/404.jpg`, class: `error`})
+          E.img.props({alt: `404`, src: `/images/statham.png`, class: `error`})
         )        
       ),
       Footer(this)
@@ -91,13 +91,16 @@ class PageIndex extends Page {
   body() {
   const tit = `Д.С. цитаты`
   const desc = `Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`
-  const img = `https://sirseverin.ru/statham/images/statham.jpg`
+  const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
       // Nav(this),
       E.main.chi(
         E.hey.chi(
           E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
-          E.img.props({src: `/images/statham.png`, alt: `Statham`}),
+          E.div.props({class: `img-hey`}).chi(
+            E.img.props({src: `/images/statham.png`, alt: `Statham`}),
+            E.a.props({href: `https://drinkibri.ru/`, target: `_blank`}),
+          ),
           E.div.chi(`18+`)
         ),
         E.block.chi(
@@ -145,8 +148,8 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:title`, content: tit}),
         E.meta.props({property: `og:description`, content: desc}),
         E.meta.props({property: `og:type`, content: `website`}),
-        E.meta.props({property: `og:site_name`, content: `drinkibri.ru`}),
-        // E.meta.props({property: `og:url`, content: `https://drinkibri.ru/`}),
+        E.meta.props({property: `og:site_name`, content: `statham.fun`}),
+        E.meta.props({property: `og:url`, content: `https://statham.fun/`}),
         E.meta.props({property: `og:image`, content: img}),
         E.meta.props({property: `og:image:height`, content: `600`}),
         E.meta.props({property: `og:image:width`, content: `300`}),
@@ -155,7 +158,7 @@ function Layout(tit, desc, img, ...chi) {
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,0..1,0..100&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
-        // Md(`./data/anal.md`)
+        Md(`./data/anal.md`)
       ),
       E.body.chi(chi),
       E.script.props({type: `module`, src: `/browser.mjs`, defer: ``}),

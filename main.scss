@@ -75,17 +75,31 @@ hey {
   justify-content: flex-start;
   width: 1000px;
   max-width: 90%;
-  img {
+  .img-hey {
     width: 60%;
     max-height: 650px;
-    object-fit: cover;
-    border-radius: 10px;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+    a {
+      cursor: pointer;
+      position: absolute;
+      width: 70px;
+      height: 60px;
+      top: 72%;
+      right: 36%;
+      margin: 0;
+      padding: 0;
+    }
   }
   h1 {
     font-size: 2em;
     margin: 2em 0 1em 0;
     padding: 0;
-    max-width: 70%;
+    max-width: 40%;
     @include geologica($weight: 1000, $cursive: 0, $sharpness: 20);
   }
   div {
@@ -353,7 +367,6 @@ form {
     padding: 10px;
     display: block;
   }
-  
   input[type=checkbox]:checked + label {
     background-color: green;
   }
@@ -371,17 +384,7 @@ form {
 ::-webkit-scrollbar-thumb:hover { /* Handle on hover */
   background: black;
 }
-@media (max-width: 800px) {
-  header nav a:nth-last-child(-n+5) {
-    display: none;
-  }
-  header nav a:first-child {
-    display: none;
-  }
-  mobilemenu a:nth-last-child(3) {
-    display: block;
-  }
-}
+
 @media screen and (max-width: 1250px) {
   article, blog, cocktails, .content {
     width: 90%;
@@ -430,17 +433,6 @@ form {
     }
   }
 }
-@media screen and (max-width: 1000px) {
-  header nav menu {
-    display: flex;
-  }
-    header nav a:nth-last-child(-n+8) {
-    display: none;
-  }
-  mobilemenu a:nth-child(n+1) {
-    display: block;
-  }
-}
 @media screen and (max-width: 860px) {
   hey {
     width: 90%;
@@ -452,7 +444,7 @@ form {
       max-width: 100%;
       margin: 2em 0;
     }
-    img {
+    .img-hey {
       // height: 50vh;
       width: 100%;
       margin: 0 0 2em 0;
