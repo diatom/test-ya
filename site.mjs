@@ -9,8 +9,8 @@ import * as l from './live.mjs'
 
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
 
-import * as data from './data/data.js';
-import * as qoutes from './data/qoutes.js';
+import * as data from './data/data.js'
+import * as qoutes from './data/qoutes.js'
 
 const {E} = new p.Ren(dg.document).patchProto(dg.glob.Element)
 
