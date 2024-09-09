@@ -61,18 +61,70 @@ hey .img-hey a {
   margin: 0;
   padding: 0;
 }
-hey h1 {
-  font-size: 2em;
-  margin: 2em 0 1em 0;
-  padding: 0;
+hey .greeting {
+  margin: 2em 2em 1em 0;
   max-width: 40%;
-  font-family: "Lora", serif;
+}
+hey .greeting h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+hey .greeting h3 {
+  margin: 4em 0 0 0;
+  font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 50;
+  text-decoration: underline solid grey;
 }
-hey div {
+hey .greeting .today-quote {
+  margin: 0.5em 0 0 0;
+  width: 80%;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 50;
+}
+hey .adult {
   margin: 2em 0;
+}
+
+.box-qoute {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 8em;
+  height: auto;
+}
+.box-qoute .quote-button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.box-qoute .quote-button img {
+  border-radius: 5px;
+  width: 100%;
+}
+.box-qoute .button-quote {
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 0 0 2em 0;
+  width: 90%;
+  padding: 5%;
+  font-size: 0.8em;
+  background-color: white;
+}
+.box-qoute P {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 100%;
 }
 
 footer {
@@ -412,7 +464,13 @@ form input[type=checkbox]:checked + label {
     width: 90%;
     margin-bottom: 0;
     flex-direction: column;
-    margin: 0;
+  }
+  hey .greeting {
+    max-width: 100%;
+    margin: 0 0 2em 0;
+  }
+  hey .greeting h3 {
+    margin: 3em 0 0 0;
   }
   hey h1 {
     font-size: 1.8em;
@@ -471,6 +529,20 @@ form input[type=checkbox]:checked + label {
     margin: 1em 0;
     border-radius: 20px;
     background-color: white;
+  }
+
+  .box-qoute {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 15em 0;
+  }
+  .box-qoute .quote-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   footer {
