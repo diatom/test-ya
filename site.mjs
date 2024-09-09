@@ -96,16 +96,25 @@ class PageIndex extends Page {
       // Nav(this),
       E.main.chi(
         E.hey.chi(
-          E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
+          E.div.props({class: `greeting`}).chi(
+            E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
+            E.h3.chi(`Цитата дня`),
+            E.div.props({class: `today-quote`}).chi(``),
+          ),
           E.div.props({class: `img-hey`}).chi(
             E.img.props({src: `/images/statham.png`, alt: `Statham`}),
             E.a.props({href: `https://drinkibri.ru/`, target: `_blank`}),
           ),
-          E.div.chi(`18+`)
+          E.div.props({class: `adult`}).chi(`18+`)
+        ),
+        E.div.props({class: `box-qoute`}).chi(
+          E.div.props({class: `button-quote`}),
+          E.p.chi(`Случайная цитата по клику`),
+          E.button.props({class: `quote-button`}).chi(E.img.props({src: `/images/statham-qoute.jpg`})),
         ),
         E.block.chi(
           E.div.props({class: `block-info`}).chi(
-            E.h2.chi(`Цитаты Джейсона Стетхема`),
+            E.h2.chi(`Все цитаты Джейсона Стетхема`),
             getItem(qoutes.q)
           ),
         ),
@@ -119,7 +128,7 @@ function getItem(a) {
     a.map((val) => {
       return E.div.props({class: `quote`, id: a.indexOf(val)}).chi(E.button.chi(
         E.img.props({src: `images/anchor.svg`, alt: `anchor`, class: `a-svg`})
-      ).props({class: `copy-b`}), val)
+      ).props({class: `copy-b`}), `— ` + val)
     })
 )
 }

@@ -1,5 +1,6 @@
 import * as p from 'https://cdn.jsdelivr.net/npm/@mitranim/js@0.1.25/prax.mjs'
 const {E} = p.Ren.native()
+import * as qoutes from './data/qoutes.js';
 console.log(`The site was made by Severin B. https://sirseverin.ru/
 ༼ つ ◕_◕ ༽つ
 `)
@@ -24,6 +25,45 @@ document.querySelectorAll('.copy-b').forEach(button => {
       // })
   })
 })
+
+// Random day-qoute
+function getRandomEvent() {
+  const randomIndex = Math.floor(Math.random() * qoutes.q.length)
+  return qoutes.q[randomIndex]
+}
+function setEvent() {
+  const lastEventDate = localStorage.getItem('lastEventDate')
+  const today = new Date().toISOString().split('T')[0] // Получаем текущую дату в формате YYYY-MM-DD
+  if (lastEventDate !== today) {
+      // Если дата изменилась, устанавливаем новое событие
+      const newEvent = getRandomEvent()
+      document.querySelector('.today-quote').innerText = `— ` + newEvent // Выводим событие в div
+      localStorage.setItem('lastEventDate', today) // Сохраняем текущую дату
+      localStorage.setItem('currentEvent', newEvent) // Сохраняем текущее событие
+  } else {
+      // Если дата не изменилась, загружаем предыдущее событие
+      const previousEvent = localStorage.getItem('currentEvent')
+      document.querySelector('.today-quote').innerText = previousEvent // Выводим предыдущее событие
+  }
+}
+// Обновляем событие при загрузке страницы
+setEvent()
+
+
+// Random button qoute
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * qoutes.q.length)
+  return qoutes.q[randomIndex]
+}
+function updateQuote() {
+  const newQuote = getRandomQuote()
+  document.querySelector('.button-quote').innerText = `— ` + newQuote // Обновляем текст в div
+}
+// Обновляем цитату при загрузке страницы
+updateQuote()
+// Обновляем цитату по нажатию кнопки
+document.querySelector('.quote-button').addEventListener('click', updateQuote)
+
 
 // Tags button
 // if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {
