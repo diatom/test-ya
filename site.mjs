@@ -89,7 +89,7 @@ class PageIndex extends Page {
   title() {return `Главная`}
 
   body() {
-  const tit = `Цитаты Джейсона Стетхема `
+  const tit = `Цитаты Стетхема `
   const desc = `Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`
   const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
