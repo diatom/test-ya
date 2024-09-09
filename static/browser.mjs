@@ -1,5 +1,6 @@
 import * as p from 'https://cdn.jsdelivr.net/npm/@mitranim/js@0.1.25/prax.mjs'
 const {E} = p.Ren.native()
+import * as qoutes from './qoutes.js';
 import * as qoutes from './data/qoutes.js';
 console.log(`The site was made by Severin B. https://sirseverin.ru/
 ༼ つ ◕_◕ ༽つ
