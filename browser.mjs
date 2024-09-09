@@ -65,6 +65,11 @@ updateQuote()
 // Обновляем цитату по нажатию кнопки
 document.querySelector('.quote-button').addEventListener('click', updateQuote)
 
+let count = 0
+document.querySelector(`.quote-button`).addEventListener(`click`, () => {
+  count++
+  document.querySelector('.click-count').innerText = count
+})
 
 // Tags button
 // if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {

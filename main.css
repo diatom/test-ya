@@ -98,6 +98,9 @@ hey .adult {
   right: 10%;
   width: 8em;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .box-qoute .quote-button {
   border: none;
@@ -125,6 +128,13 @@ hey .adult {
   padding: 0;
   background-color: white;
   width: 100%;
+}
+.box-qoute .click-count {
+  font-size: 1.6em;
+  margin: 0.5em 0 0 0;
+  font-weight: 700;
+  background-color: white;
+  text-align: center;
 }
 
 footer {
@@ -533,9 +543,6 @@ form input[type=checkbox]:checked + label {
 
   .box-qoute {
     position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 50%;
     margin: 15em 0;
   }
