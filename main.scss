@@ -134,10 +134,9 @@ hey {
   right: 10%;
   width: 8em;
   height: auto;
-
-  // display: flex;
-  // justify-content: flex-end;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .quote-button {
     border: none;
     background: none;
@@ -164,6 +163,13 @@ hey {
     padding: 0;
     background-color: white;
     width: 100%;
+  }
+  .click-count {
+    font-size: 1.6em;
+    margin: 0.5em 0 0 0;
+    font-weight: 700;
+    background-color: white;
+    text-align: center;
   }
 }
 footer {
@@ -563,20 +569,13 @@ form {
     }
   }
   .box-qoute {
-    // position: relative;
     position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 50%;
     margin: 15em 0;
-    // .button-quote {
-    // }
     .quote-button {
       width: 100%;
       display: flex;
       justify-content: center;
-
     }
   }
   footer {

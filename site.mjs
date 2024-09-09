@@ -111,6 +111,7 @@ class PageIndex extends Page {
           E.div.props({class: `button-quote`}),
           E.p.chi(`Случайная цитата по клику`),
           E.button.props({class: `quote-button`}).chi(E.img.props({src: `/images/statham-qoute.jpg`})),
+          E.div.props({class: `click-count`}).chi(`0`),
         ),
         E.block.chi(
           E.div.props({class: `block-info`}).chi(
