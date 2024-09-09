@@ -7,10 +7,18 @@ $second: #028001;
 $cinnamon: #986544;
 $ginger: #d2a45d;
 $russian: #ffb7b4;
+$lora-font: "Lora", serif;
 $geologica-font: "Geologica", sans-serif;
 $mulish-font: "Mulish", sans-serif;
 $transition-duration: 0.3s;
 $hover-scale: 1.03;
+
+@mixin lora($weight: 400) {
+  font-family: $lora-font;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
 
 @mixin geologica($weight: 400, $cursive: 0, $sharpness: 50) {
     font-family: $geologica-font;
@@ -49,7 +57,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include geologica($weight: 400, $cursive: 0, $sharpness: 50);
+  @include geologica($weight: 400);
 }
 header, footer, nav, a {
   display: flex;
@@ -100,7 +108,7 @@ hey {
     margin: 2em 0 1em 0;
     padding: 0;
     max-width: 40%;
-    @include geologica($weight: 1000, $cursive: 0, $sharpness: 20);
+    @include lora($weight: 700);
   }
   div {
     margin: 2em 0;
