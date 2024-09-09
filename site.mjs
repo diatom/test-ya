@@ -90,7 +90,7 @@ class PageIndex extends Page {
 
   body() {
   const tit = `Цитаты Стетхема `
-  const desc = `Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`
+  const desc = `Сборник цитат Джейсона Стетхема`
   const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
       // Nav(this),
