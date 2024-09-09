@@ -66,11 +66,10 @@ hey h1 {
   margin: 2em 0 1em 0;
   padding: 0;
   max-width: 40%;
-  font-family: "Geologica", sans-serif;
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
-  font-weight: 1000;
+  font-weight: 700;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 20;
 }
 hey div {
   margin: 2em 0;
