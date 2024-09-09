@@ -205,7 +205,7 @@ function Footer(page) {
       E.div.chi(
         Contact(data.contact)
       ),
-    E.span.chi(E.a.props({href: `https://github.com/diatom/statham`}).
+    E.span.chi(E.a.props({href: `https://github.com/diatom`}).
     chi(`© ${currentYear}. Сайт сделал Severin B. 👾`)
     )
   )
