@@ -154,7 +154,7 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({name: `viewport`, content: `width=device-width, initial-scale=1`}),
         E.title.chi(tit),
         E.meta.props({name: `description`, content: desc}),
-        E.meta.props({name: `keywords`, content: `цитаты, Джэйсон Стэтхем, цитаты Джэйсон Стэтхем`}),
+        E.meta.props({name: `keywords`, content: `цитаты стетхема, цитаты, Джэйсон Стэтхем, цитаты Джэйсон Стэтхем, пацанские цитаты джейсона стетхема`}),
         E.meta.props({property: `og:title`, content: tit}),
         E.meta.props({property: `og:description`, content: desc}),
         E.meta.props({property: `og:type`, content: `website`}),
