@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /cart/
-Disallow: /checkout/
 Allow: /
-Sitemap: https://drinkibri.ru/sitemap.xml
+
+Sitemap: https://statham.fun/sitemap.xml
