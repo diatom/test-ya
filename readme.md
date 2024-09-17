@@ -1,5 +1,1 @@
-Statham qoutes
-
-Using:
-* [js](https://github.com/mitranim/js/) library by mitranim
-* [marked](https://github.com/markedjs/marked) library
+A test assignment for the position of a web developer

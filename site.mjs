@@ -109,7 +109,8 @@ class PageIndex extends Page {
             )
           ),
           E.div.props({class: `img-hey`}).chi(
-            E.img.props({src: `images/city.png`, alt: `City`})
+            E.img.props({src: `images/city.png`, alt: `City`}),
+            // E.img.props({src: `images/circle.svg`, alt: `Circle`}),
           ),
           E.div.props({}).chi(
             E.div.chi(`Дело помощи утопающим — дело рук самих утопающих!`),
