@@ -1,41 +1,21 @@
-$light-bg-color: white;
-$light-text-color: black;
-$dark-bg-color: hsl(0, 0%, 14%);
-$dark-text-color: white;
-$primary: #3A7189;
-$second: #028001;
-$cinnamon: #986544;
-$ginger: #d2a45d;
-$russian: #ffb7b4;
-$lora-font: "Lora", serif;
-$geologica-font: "Geologica", sans-serif;
-$mulish-font: "Mulish", sans-serif;
+$merriweather-font: "Merriweather", serif;
+$golos-text-font: "Golos Text", sans-serif;
 $transition-duration: 0.3s;
 $hover-scale: 1.03;
 
-@mixin lora($weight: 400) {
-  font-family: $lora-font;
+@mixin merriweather($weight: 400) {
+  font-family: $merriweather-font;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin golos-text($weight: 400) {
+  font-family: $golos-text-font;
   font-optical-sizing: auto;
   font-weight: $weight;
   font-style: normal;
 }
 
-@mixin geologica($weight: 400, $cursive: 0, $sharpness: 50) {
-    font-family: $geologica-font;
-    font-optical-sizing: auto;
-    font-weight: $weight;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0,
-      "CRSV" $cursive,
-      "SHRP" $sharpness;
-}
-@mixin mulish($weight: 400) {
-    font-family: $mulish-font;
-    font-optical-sizing: auto;
-    font-weight: $weight;
-    font-style: normal;
-}
 @mixin img-styles($transition-duration) {
   cursor: pointer;
   max-width: 100%;
@@ -49,7 +29,6 @@ $hover-scale: 1.03;
   transform: scale($scale);
 }
 body {
-  color: var(--text-color);
   padding: 0 0;
   margin: 0;
   display: flex;
@@ -57,7 +36,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include geologica($weight: 400);
+  @include golos-text($weight: 400);
 }
 header, footer, nav, a {
   display: flex;
@@ -70,19 +49,23 @@ main {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  h1 {
-    font-size: 2.5em;
-    margin: 2em 0 0 0;
-  }
 }
 hey {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
   margin: 2.5em 0 5em 0;
   justify-content: flex-start;
-  width: 1000px;
+  width: 1222px;
   max-width: 90%;
+  h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #313131;
+    margin: 0;
+    padding: 0;
+    @include merriweather($weight: 400);
+  }
   .img-hey {
     width: 60%;
     max-height: 650px;
@@ -92,125 +75,25 @@ hey {
       width: 100%;
       height: auto;
     }
-    a {
-      cursor: pointer;
-      position: absolute;
-      width: 70px;
-      height: 60px;
-      top: 72%;
-      right: 36%;
-      margin: 0;
-      padding: 0;
-    }
   }
   .greeting {
     margin: 2em 2em 1em 0;
     max-width: 40%;
-    h1 {
-      font-size: 2em;
-      margin: 0;
-      padding: 0;
-      // @include lora($weight: 700);
-    }
-    h3 {
-      margin: 4em 0 0 0;
-      @include geologica($weight: 700);
-      text-decoration: underline solid grey;
-    }
-    .today-quote {
-      margin: 0.5em 0 0 0;
-      width: 80%;
-      @include geologica($weight: 400);
-
-    }
-  }
-  .adult {
-    margin: 2em 0;
-  }
-}
-.box-qoute {
-  position: fixed;
-  bottom: 10%;
-  right: 10%;
-  width: 8em;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .quote-button {
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    img {
-      border-radius: 5px;
-      width: 100%;
-    }
-  }
-  .button-quote {
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 0 0 2em 0;
-    width: 90%;
-    padding: 5%;
-    font-size: 0.8em;
-    background-color: white;
-  }
-  P {
-    font-size: 0.8em;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    width: 100%;
-  }
-  .click-count {
-    font-size: 1.6em;
-    margin: 0.5em 0 0 0;
-    font-weight: 700;
-    background-color: white;
-    text-align: center;
   }
 }
 footer {
   flex-wrap: wrap;
-  height: 10rem;
-  width: 1000px;
-  max-width: 90%;
-  border-radius: 10px;
+  height: 150px;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  background: #CAC1FF;
-  color: black;
-  font-size: 0.9em;
-  padding: 1.5rem 0 0 0;
-  margin: 5em 0 2em 0;
-  img {
-    width: 10em;
-    margin: 0 2em;
-  }
-  div, nav {
+  background: #E9DED4;
+  color: #313131;
+  font-size: 16px;
+  div {
     display: flex;
-    margin: 0 2rem 0 2rem;
     flex-direction: column;
-  }
-  a {
-    margin: 0;
-    padding: 0.3rem 1rem 0.3rem 1rem;
-    color: black;
-  }
-  a:hover {
-    text-decoration: underline 1px solid black;
-  }
-  p {
-    width: 20rem;
-    margin: 0 1rem;
-    display: flex;
-  }
-  span { 
-    width: 100%;
-    justify-content: center;
-    display: flex;
+    width: 1222px;
   }
 }
 block {
@@ -222,58 +105,6 @@ block {
   justify-content: center;
   flex-direction: row;
   margin: 2em 0;
-  .block-info {
-    max-width: 80%;
-    padding: 0 5%;
-    .quote {
-      margin: 0;
-      padding: 1.5em 0;
-      border: 0.5px solid transparent;
-      border-top-color: rgb(206, 190, 190);
-      display: flex;
-      .copy-b {
-        border: 0;
-        background: none;
-        margin: 0 1em 0 0;
-        padding: 0;
-        cursor: pointer;
-        img {
-          width: 20px;
-
-        }
-      }
-    }
-    .quote:last-child {
-      border-bottom-color: rgb(206, 190, 190);
-    }
-    a {
-      width: 10em;
-      margin: 2em 0;
-      background-color: $second;
-      border-radius: 30px;
-      color: white;
-      align-items: center;
-      justify-content: center;
-      padding: 1em;
-    }
-  }
-  h2 {
-    width: auto;
-    font-size: 1.5em;
-  }
-  .idea {
-    width: auto;
-    margin: 0;
-    padding: 0 4em 0 0;
-    span {
-      font-size: 1.2em;
-      color: $second;
-    }
-    a {
-      text-decoration: underline 2px dotted blue;
-      margin: auto 0 0 0;
-    }
-  }
 }
 .error {
   display: flex;
@@ -290,189 +121,8 @@ block {
 .error:hover {
   text-decoration: underline 1px solid white;
 }
-tags {
-  width: 100%;
-  margin: 1em 0;
-  .btn {
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0);
-    border: none;
-    color: var(--text-color);
-    padding: 0.5em;
-    font-size: 1.05em;
-    span {
-    color: grey;
-    }
-  }
-  .btn:hover {
-    background-color: rgba(128, 128, 128, 0.2);
-  }
-  .btn.active {
-    background-color: rgba(128, 128, 128, 0.4);
-  }
-  .help {
-    margin: 0 0.5em 0 0;
-    font-size: 1.05em;
-  }
-}
-arttags {
-  width: 100%;
-  // margin: 2em 0;
-  .btn {
-    // cursor: pointer;
-    background-color: transparent;
-    border: none;
-    color: grey;
-    padding: 0.2em;
-    font-size: 0.9em;
-  }
-  // .btn:hover {
-  //   background-color: rgba(128, 128, 128, 0.2);
-  // }
-  // .btn.active {
-  //   background-color: rgba(128, 128, 128, 0.4);
-  // }
-  .help {
-    margin: 0 0.5em 0 0;
-  }
-}
-// Search
-.info-cockt {
-  display: flex;
-  flex-direction: column;
-  margin: 2em 0 0 0;
-  width: 60%;
-  max-width: 70em;
-  // background-image: url('./images/books.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center top;
-  border-radius: 5px;
-  align-items: left;
-  justify-content: flex-start;
-  .img-info {
-    width: 100%;
-    height: 20em;
-    object-fit: cover;
-    border-radius: 5px;
-    position: relative;
-  }
-  h2 {
-    width: 100%;
-    font-size: 1.8em;
-    color: grey;
-  }
-}
-search {
-  margin: 1em 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  max-width: 30em;
-  height: 100px;
-  gap: 10px;
-
-  label {
-    font-size: 1.1em;
-    margin: 0 0 0 0.5em;
-    width: 80%;
-  }
-  div {
-    display: flex;
-    height: 35px;
-    background-color: var(--bg-color);
-    z-index: 900;
-    border: 0.2px solid rgb(83, 76, 76);
-    border-radius: 10px;
-    padding: 0.5em;
-  }
-  input[type="text"], button {
-    border: none;
-    background: none;
-    outline: none;
-    line-height: 1;
-    z-index: 900;
-    caret-color: var(--text-color);
-    color: var(--text-color);
-  }
-  input {
-    width: 100%; 
-  }
-  input[type="text"]::placeholder {
-    color: #555454;
-    font-size: 1.2em;
-  }
-  button {
-    cursor: pointer;
-    .img-svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 1em 0 0 0;
-  padding: 0 1em;
-
-  label {
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 2px;
-    background-color: #f0e9e9;
-    font-size: 0.9em;
-  }
-  label:hover {
-    color: white;
-  }
-  input[type=checkbox] + label {
-    background-color: #ddd;
-    padding: 10px;
-    display: block;
-  }
-  input[type=checkbox]:checked + label {
-    background-color: green;
-  }
-}
-// Scroll
-::-webkit-scrollbar { /* width */
-  width: 10px;
-}
-::-webkit-scrollbar-track { /* Track */
-  background: transparent;
-}
-::-webkit-scrollbar-thumb { /* Handle */
-  background: black;
-}
-::-webkit-scrollbar-thumb:hover { /* Handle on hover */
-  background: black;
-}
 
 @media screen and (max-width: 1250px) {
-  article, blog, cocktails, .content {
-    width: 90%;
-  }
-  .spoiler {
-    width: calc(100% - 1px);
-    margin: 2em 0 0 0;
-    .spoiler-content {
-      width: 85%;
-      img {
-        width: 60%;
-      }
-    }
-  }
-  .info-cockt {
-    width: 90%;
-  }
-  principe {
-    div {
-      width: 70%;
-    }
-  }
   header, footer {
     max-width: 90%;
   }
@@ -488,15 +138,12 @@ form {
     }
   }
   hey {
-    width: 1600px;
+    width: 500px;
     max-width: 90%;
   }
   block {
     width: 1600px;
     max-width: 90%;
-    .units-pro {
-      justify-content: space-between;
-    }
   }
 }
 @media screen and (max-width: 860px) {
@@ -516,9 +163,7 @@ form {
       max-width: 100%;
       margin: 2em 0;
     }
-
     .img-hey {
-      // height: 50vh;
       width: 100%;
       margin: 0 0 2em 0;
     }
@@ -530,54 +175,9 @@ form {
       width: 100%;
     }
   }
-  .info-cockt {
-    width: 90%;
-    search {
-      position: relative;
-      width: 90%;
-      margin: 0;
-    }
-    .img-info {
-      display: none;
-    }
-  }
-  tags {
-    font-size: 0.9em;
-  }
   block {
     flex-direction: column;   
-    .block-info {
-      max-width: 100%;
-      margin: 0 0 2em 0;
-    }
-    .idea-ingri, .units-pro, .mixology-img {
-      max-width: 100%;
-      margin: 0;
-      align-items: left;
-      justify-content: left;
-    }
-    .units-pro {
-      flex-direction: column;
-      align-items: center;
-      .u-pro {
-        width: 90%;
-        padding: 2em 0;
-        margin: 1em 0;
-        border-radius: 20px;
-        background-color: white;
-      }
-    }
-  }
-  .box-qoute {
-    position: static;
-    width: 50%;
-    margin: 15em 0;
-    .quote-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
+}
   footer {
     flex-direction: column;
     flex-wrap: nowrap;

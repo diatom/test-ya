@@ -10,7 +10,6 @@ import * as l from './live.mjs'
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
 
 import * as data from './data/data.js'
-import * as qoutes from './data/qoutes.js'
 
 const {E} = new p.Ren(dg.document).patchProto(dg.glob.Element)
 
@@ -89,36 +88,110 @@ class PageIndex extends Page {
   title() {return `Главная`}
 
   body() {
-  const tit = `Цитаты Стетхема `
-  const desc = `Сборник цитат Джейсона Стетхема`
+  const tit = `Клуб четырёх коней`
+  const desc = `Сайт международного Васюкинского турнира по шахматам`
   const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
       // Nav(this),
       E.main.chi(
         E.hey.chi(
+          E.div.chi(
+            E.img.props({src: `images/logo.svg`, alt: `Horse-logo`}),
+            E.div.props().chi(`Клуб четырех коней`)
+          ),
           E.div.props({class: `greeting`}).chi(
-            E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
-            E.h3.chi(`Цитата дня`),
-            E.div.props({class: `today-quote`}).chi(``),
+            E.h1.chi(`Превратите уездный город`),
+            E.h1.chi(`в столицу земного шара`),
+            E.div.chi(`Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам`),
+            E.div.props({}).chi(
+              E.button.props({}).chi(`Поддержать шахматную мысль`),
+              E.button.props({}).chi(`Подробнее о турнире`),
+            )
           ),
           E.div.props({class: `img-hey`}).chi(
-            E.img.props({src: `/images/statham.png`, alt: `Statham`}),
-            E.a.props({href: `https://drinkibri.ru/`, target: `_blank`}),
+            E.img.props({src: `images/city.png`, alt: `City`})
           ),
-          E.div.props({class: `adult`}).chi(`18+`)
+          E.div.props({}).chi(
+            E.div.chi(`Дело помощи утопающим — дело рук самих утопающих!`),
+            E.div.chi(`Шахматы двигают вперед не только культуру, но и экономику!`),
+            E.div.chi(`Лед тронулся, господа присяжные заседатели!`),
+          )
         ),
-        E.div.props({class: `box-qoute`}).chi(
-          E.div.props({class: `button-quote`}),
-          E.p.chi(`Случайная цитата по клику`),
-          E.button.props({class: `quote-button`}).chi(E.img.props({src: `/images/statham-qoute.jpg`})),
-          E.div.props({class: `click-count`}).chi(`0`),
+        E.div.props({}).chi(
+          E.div.props({}).chi(`Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: «Плодотворная дебютная идея»`),
+          E.img.props({}),
         ),
-        E.block.chi(
-          E.div.props({class: `block-info`}).chi(
-            E.h2.chi(`Все цитаты Джейсона Стетхема`),
-            getItem(qoutes.q)
+        E.div.props({}).chi(
+          E.img.props({}),
+          E.div.props({}).chi(
+            E.div.chi(`и Сеанс одновременной игры в шахматы на 160 досках гроссмейстера О. Бендера`),
+            E.table.chi(),
+            E.div.chi(`По всем вопросам обращаться в администрацию к К. Михельсону`)
           ),
         ),
+        E.div.chi(
+          E.div.chi(
+            E.h1.chi(`Этапы преображения Васюков`),
+            E.p.chi(`Будущие источники обогащения васюкинцев`)
+          ),
+          E.div.chi(
+            E.div.props({}).chi(E.div.props({}).chi(`1`), E.div.chi(`Строительство железнодорожной магистрали Москва-Васюки`)),
+            E.div.props({}).chi(E.div.props({}).chi(`2`), E.div.chi(`Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов`)),
+            E.div.props({}).chi(E.div.props({}).chi(`3`), E.div.chi(`Поднятие сельского хозяйства в радиусе на тысячу километров: производство 
+              овощей, фруктов, икры, шоколадных конфет`)),
+            E.div.props({}).chi(E.div.props({}).chi(`4`), E.div.chi(`Строительство дворца для турнира`)),
+            E.div.props({}).chi(E.div.props({}).chi(`5`), E.div.chi(`Размещение гаражей для гостевого автотранспорта`)),
+            E.div.props({}).chi(E.div.props({}).chi(`6`), E.div.chi(`Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов`)),
+            E.div.props({}).chi(E.div.props({}).chi(`7`), E.div.chi(`Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов 
+              и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн`), E.img.props({src: `images/jet.png`, alt: `Jet`})),
+          )
+        ),
+        E.div.props({}).chi(
+          E.div.chi(
+            E.h1.chi(`Участники турнира`),
+            E.div.chi(
+              E.div.props({}).chi(E.img.props({src: `images/arrow.svg`, alt: `arrow`})),
+              E.div.props({}).chi(`3 / 6`),
+              E.div.props({}).chi(E.img.props({src: `images/arrow.svg`, alt: `arrow`})),
+            )
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Хозе-Рауль Капабланка`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Эммануил Ласкер`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Александр Алехин`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Арон Нимцович`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Рихард Рети`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+          E.div.props({}).chi(
+            E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+            E.h5.chi(`Остап Бендер`),
+            E.div.chi(`Чемпион мира по шахматам`),
+            E.button.props({}).chi(`Подробнее`)
+          ),
+        )
       ),
       Footer(this)
     )
@@ -154,7 +227,7 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({name: `viewport`, content: `width=device-width, initial-scale=1`}),
         E.title.chi(tit),
         E.meta.props({name: `description`, content: desc}),
-        E.meta.props({name: `keywords`, content: `цитаты стетхема, цитаты, Джэйсон Стэтхем, цитаты Джэйсон Стэтхем, пацанские цитаты джейсона стетхема`}),
+        E.meta.props({name: `keywords`, content: `шахматы, турнир, Васюки`}),
         E.meta.props({property: `og:title`, content: tit}),
         E.meta.props({property: `og:description`, content: desc}),
         E.meta.props({property: `og:type`, content: `website`}),
@@ -164,10 +237,9 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:image:height`, content: `600`}),
         E.meta.props({property: `og:image:width`, content: `300`}),
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
-        E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.ico`}),
+        E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.svg`}),
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
-        E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap')`),
-        E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,0..1,0..100&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');`),
+        E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
         Md(`./data/anal.md`)
       ),
@@ -185,7 +257,7 @@ function Nav(page) {
     E.nav.chi(a.map(page.site.nav, PageLink), E.menu.chi(
       getMenu()
     )),
-    E.mobilemenu.chi(a.map(page.site.nav, PageLink)),
+    E.mobilemenu.chi(a.map(page.site.nav, PageLink)), 
   )
 }
 function getMenu() {
@@ -193,21 +265,10 @@ function getMenu() {
 }
 
 
-function NavFooter(page) {
-  return E.nav.chi(a.map(page.site.nav, PageLink)
-    )
-}
-const currentYear = new Date().getFullYear();
-
 function Footer(page) {
   return E.footer.props({id: `footer`}).chi(
-    E.p.chi(`Материал предназначен для лиц старше 18 лет. Данный сайт сделан в юмористических целях. Весь материал собран из открытых источников сети интернета`),
-      E.div.chi(
-        Contact(data.contact)
-      ),
-    E.span.chi(E.a.props({href: `https://github.com/diatom`}).
-    chi(`© ${currentYear}. Сайт сделал Severin B. 👾`)
-    )
+    E.div.chi(`Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. 
+      С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».`),
   )
 }
 

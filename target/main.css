@@ -1,5 +1,4 @@
 body {
-  color: var(--text-color);
   padding: 0 0;
   margin: 0;
   display: flex;
@@ -7,11 +6,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Geologica", sans-serif;
+  font-family: "Golos Text", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 50;
 }
 
 header, footer, nav, a {
@@ -27,19 +25,25 @@ main {
   margin: 0;
   padding: 0;
 }
-main h1 {
-  font-size: 2.5em;
-  margin: 2em 0 0 0;
-}
 
 hey {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
   margin: 2.5em 0 5em 0;
   justify-content: flex-start;
-  width: 1000px;
+  width: 1222px;
   max-width: 90%;
+}
+hey h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #313131;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 hey .img-hey {
   width: 60%;
@@ -51,132 +55,25 @@ hey .img-hey img {
   width: 100%;
   height: auto;
 }
-hey .img-hey a {
-  cursor: pointer;
-  position: absolute;
-  width: 70px;
-  height: 60px;
-  top: 72%;
-  right: 36%;
-  margin: 0;
-  padding: 0;
-}
 hey .greeting {
   margin: 2em 2em 1em 0;
   max-width: 40%;
 }
-hey .greeting h1 {
-  font-size: 2em;
-  margin: 0;
-  padding: 0;
-}
-hey .greeting h3 {
-  margin: 4em 0 0 0;
-  font-family: "Geologica", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 50;
-  text-decoration: underline solid grey;
-}
-hey .greeting .today-quote {
-  margin: 0.5em 0 0 0;
-  width: 80%;
-  font-family: "Geologica", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 50;
-}
-hey .adult {
-  margin: 2em 0;
-}
-
-.box-qoute {
-  position: fixed;
-  bottom: 10%;
-  right: 10%;
-  width: 8em;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.box-qoute .quote-button {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-.box-qoute .quote-button img {
-  border-radius: 5px;
-  width: 100%;
-}
-.box-qoute .button-quote {
-  border: 2px solid black;
-  border-radius: 15px;
-  margin: 0 0 2em 0;
-  width: 90%;
-  padding: 5%;
-  font-size: 0.8em;
-  background-color: white;
-}
-.box-qoute P {
-  font-size: 0.8em;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  width: 100%;
-}
-.box-qoute .click-count {
-  font-size: 1.6em;
-  margin: 0.5em 0 0 0;
-  font-weight: 700;
-  background-color: white;
-  text-align: center;
-}
 
 footer {
   flex-wrap: wrap;
-  height: 10rem;
-  width: 1000px;
-  max-width: 90%;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  background: #CAC1FF;
-  color: black;
-  font-size: 0.9em;
-  padding: 1.5rem 0 0 0;
-  margin: 5em 0 2em 0;
-}
-footer img {
-  width: 10em;
-  margin: 0 2em;
-}
-footer div, footer nav {
-  display: flex;
-  margin: 0 2rem 0 2rem;
-  flex-direction: column;
-}
-footer a {
-  margin: 0;
-  padding: 0.3rem 1rem 0.3rem 1rem;
-  color: black;
-}
-footer a:hover {
-  text-decoration: underline 1px solid black;
-}
-footer p {
-  width: 20rem;
-  margin: 0 1rem;
-  display: flex;
-}
-footer span {
+  height: 150px;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  background: #E9DED4;
+  color: #313131;
+  font-size: 16px;
+}
+footer div {
   display: flex;
+  flex-direction: column;
+  width: 1222px;
 }
 
 block {
@@ -188,57 +85,6 @@ block {
   justify-content: center;
   flex-direction: row;
   margin: 2em 0;
-}
-block .block-info {
-  max-width: 80%;
-  padding: 0 5%;
-}
-block .block-info .quote {
-  margin: 0;
-  padding: 1.5em 0;
-  border: 0.5px solid transparent;
-  border-top-color: rgb(206, 190, 190);
-  display: flex;
-}
-block .block-info .quote .copy-b {
-  border: 0;
-  background: none;
-  margin: 0 1em 0 0;
-  padding: 0;
-  cursor: pointer;
-}
-block .block-info .quote .copy-b img {
-  width: 20px;
-}
-block .block-info .quote:last-child {
-  border-bottom-color: rgb(206, 190, 190);
-}
-block .block-info a {
-  width: 10em;
-  margin: 2em 0;
-  background-color: #028001;
-  border-radius: 30px;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
-}
-block h2 {
-  width: auto;
-  font-size: 1.5em;
-}
-block .idea {
-  width: auto;
-  margin: 0;
-  padding: 0 4em 0 0;
-}
-block .idea span {
-  font-size: 1.2em;
-  color: #028001;
-}
-block .idea a {
-  text-decoration: underline 2px dotted blue;
-  margin: auto 0 0 0;
 }
 
 .error {
@@ -258,182 +104,7 @@ block .idea a {
   text-decoration: underline 1px solid white;
 }
 
-tags {
-  width: 100%;
-  margin: 1em 0;
-}
-tags .btn {
-  cursor: pointer;
-  background-color: rgba(128, 128, 128, 0);
-  border: none;
-  color: var(--text-color);
-  padding: 0.5em;
-  font-size: 1.05em;
-}
-tags .btn span {
-  color: grey;
-}
-tags .btn:hover {
-  background-color: rgba(128, 128, 128, 0.2);
-}
-tags .btn.active {
-  background-color: rgba(128, 128, 128, 0.4);
-}
-tags .help {
-  margin: 0 0.5em 0 0;
-  font-size: 1.05em;
-}
-
-arttags {
-  width: 100%;
-}
-arttags .btn {
-  background-color: transparent;
-  border: none;
-  color: grey;
-  padding: 0.2em;
-  font-size: 0.9em;
-}
-arttags .help {
-  margin: 0 0.5em 0 0;
-}
-
-.info-cockt {
-  display: flex;
-  flex-direction: column;
-  margin: 2em 0 0 0;
-  width: 60%;
-  max-width: 70em;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center top;
-  border-radius: 5px;
-  align-items: left;
-  justify-content: flex-start;
-}
-.info-cockt .img-info {
-  width: 100%;
-  height: 20em;
-  object-fit: cover;
-  border-radius: 5px;
-  position: relative;
-}
-.info-cockt h2 {
-  width: 100%;
-  font-size: 1.8em;
-  color: grey;
-}
-
-search {
-  margin: 1em 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  max-width: 30em;
-  height: 100px;
-  gap: 10px;
-}
-search label {
-  font-size: 1.1em;
-  margin: 0 0 0 0.5em;
-  width: 80%;
-}
-search div {
-  display: flex;
-  height: 35px;
-  background-color: var(--bg-color);
-  z-index: 900;
-  border: 0.2px solid rgb(83, 76, 76);
-  border-radius: 10px;
-  padding: 0.5em;
-}
-search input[type=text], search button {
-  border: none;
-  background: none;
-  outline: none;
-  line-height: 1;
-  z-index: 900;
-  caret-color: var(--text-color);
-  color: var(--text-color);
-}
-search input {
-  width: 100%;
-}
-search input[type=text]::placeholder {
-  color: #555454;
-  font-size: 1.2em;
-}
-search button {
-  cursor: pointer;
-}
-search button .img-svg {
-  width: 20px;
-  height: 20px;
-}
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 1em 0 0 0;
-  padding: 0 1em;
-}
-form label {
-  cursor: pointer;
-  border-radius: 3px;
-  padding: 2px;
-  background-color: #f0e9e9;
-  font-size: 0.9em;
-}
-form label:hover {
-  color: white;
-}
-form input[type=checkbox] + label {
-  background-color: #ddd;
-  padding: 10px;
-  display: block;
-}
-form input[type=checkbox]:checked + label {
-  background-color: green;
-}
-
-::-webkit-scrollbar { /* width */
-  width: 10px;
-}
-
-::-webkit-scrollbar-track { /* Track */
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb { /* Handle */
-  background: black;
-}
-
-::-webkit-scrollbar-thumb:hover { /* Handle on hover */
-  background: black;
-}
-
 @media screen and (max-width: 1250px) {
-  article, blog, cocktails, .content {
-    width: 90%;
-  }
-  .spoiler {
-    width: calc(100% - 1px);
-    margin: 2em 0 0 0;
-  }
-  .spoiler .spoiler-content {
-    width: 85%;
-  }
-  .spoiler .spoiler-content img {
-    width: 60%;
-  }
-  .info-cockt {
-    width: 90%;
-  }
-  principe div {
-    width: 70%;
-  }
   header, footer {
     max-width: 90%;
   }
@@ -447,15 +118,12 @@ form input[type=checkbox]:checked + label {
     padding: 0.3rem;
   }
   hey {
-    width: 1600px;
+    width: 500px;
     max-width: 90%;
   }
   block {
     width: 1600px;
     max-width: 90%;
-  }
-  block .units-pro {
-    justify-content: space-between;
   }
 }
 @media screen and (max-width: 860px) {
@@ -487,53 +155,8 @@ form input[type=checkbox]:checked + label {
   .error img {
     width: 100%;
   }
-  .info-cockt {
-    width: 90%;
-  }
-  .info-cockt search {
-    position: relative;
-    width: 90%;
-    margin: 0;
-  }
-  .info-cockt .img-info {
-    display: none;
-  }
-  tags {
-    font-size: 0.9em;
-  }
   block {
     flex-direction: column;
-  }
-  block .block-info {
-    max-width: 100%;
-    margin: 0 0 2em 0;
-  }
-  block .idea-ingri, block .units-pro, block .mixology-img {
-    max-width: 100%;
-    margin: 0;
-    align-items: left;
-    justify-content: left;
-  }
-  block .units-pro {
-    flex-direction: column;
-    align-items: center;
-  }
-  block .units-pro .u-pro {
-    width: 90%;
-    padding: 2em 0;
-    margin: 1em 0;
-    border-radius: 20px;
-    background-color: white;
-  }
-  .box-qoute {
-    position: static;
-    width: 50%;
-    margin: 15em 0;
-  }
-  .box-qoute .quote-button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
   footer {
     flex-direction: column;
