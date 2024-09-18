@@ -51,36 +51,156 @@ main {
   padding: 0;
 }
 hey {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 2.5em 0 5em 0;
-  justify-content: flex-start;
-  width: 1222px;
-  max-width: 90%;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+  height: 700px;
   background-color: #E9DED4;
-  h1 {
-    font-size: 60px;
+  .logo {
+    display: flex;
+    flex-direction: row;
     text-transform: uppercase;
-    color: #313131;
-    margin: 0;
-    padding: 0;
-    @include merriweather($weight: 400);
-  }
-  .img-hey {
-    width: 60%;
-    max-height: 650px;
-    position: relative;
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: auto;
+    div {
+      width: 146px;
+      font-weight: 800;
+      margin: 0 0 0 8px;
+      color: #595653;
     }
   }
-  .greeting {
-    margin: 2em 2em 1em 0;
-    max-width: 40%;
+  .img-hey {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    .img-city {
+      width: 1604px;
+      z-index: 900;
+    }
+    .img-paper {
+      width: 100%;
+      opacity: 0.2;
+      z-index: 800;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+    .img-circle {
+      width: 660px;
+      height: 660px;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      z-index: 700;
+    }
   }
+  .hey-main {
+    width: 1222px;
+    margin: 29px 0 0 0;
+    z-index: 1000;
+  }
+  .greeting {
+    margin: 74px 0 0 0;
+    width: 542px;
+    h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #313131;
+      margin: 0;
+      padding: 0;
+      @include merriweather($weight: 400);
+    }
+    h1:nth-of-type(2) {
+      text-align: center;
+    }
+    .greeting-info {
+      text-align: center;
+      font-size: 18px;
+      margin: 44px 0;
+    }
+    .greeting-buttons {
+      display: flex;
+      justify-content: center;
+      button {
+        border: 2px solid black;
+        border-radius: 40px;
+        width: 205px;
+        padding: 0;
+        margin: 0;
+        height: 68px; 
+        background: black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        white-space: pre-line;
+        @include golos-text($weight: 500);
+      }
+      button:nth-of-type(2) {
+        background: none;
+        color: #1F1F1F;
+        width: 321px;
+        margin: 0 0 0 16px;
+      }
+    }
+  }
+}
+.running-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.line-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  margin-right: 20px;
+  text-transform: uppercase;
+  animation: scroll 25s linear infinite;
+  @include merriweather($weight: 400);
+}
+.circle {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+block {
+  width: 1222px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2em 0;
 }
 footer {
   flex-wrap: wrap;
@@ -97,15 +217,8 @@ footer {
     width: 1222px;
   }
 }
-block {
-  width: 1000px;
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 2em 0;
+.jet-img {
+  width: 100%;
 }
 .error {
   display: flex;
