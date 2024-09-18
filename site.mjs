@@ -137,31 +137,43 @@ class PageIndex extends Page {
         //   E.div.props({class: `circle`}).chi(``),
         // ),
         E.block.props({}).chi(
-          E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: «Плодотворная дебютная идея»`),
-          E.img.props({}),
+          E.div.props({class: `block-info-members`}).chi(
+            E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
+          ),
+          E.img.props({src: `images/members.png`, alt: `Members`, class: `img-members`}),
         ),
         E.block.props({}).chi(
-          E.img.props({}),
-          E.div.props({}).chi(
-            E.h4.chi(`и Сеанс одновременной игры в шахматы на 160 досках гроссмейстера О. Бендера`),
-            E.table.chi(),
-            E.div.chi(`По всем вопросам обращаться в администрацию к К. Михельсону`)
+          E.img.props({src: `images/member.png`, alt: `Member`, class: `img-member`}),
+          E.div.props({class: `block-info-member`}).chi(
+            E.h4.chi(`и Сеанс `, E.span.chi(`одновременной игры в шахматы на 160 досках`), ` гроссмейстера О. Бендера`),
+            E.table.chi(
+              E.thead.chi(E.tr.chi(E.th.chi(``), E.th.chi())),
+              E.tbody.chi(
+                E.tr.chi(E.td.chi(`Место проведения:`), E.td.chi(`Клуб «Картонажник»`)),
+                E.tr.chi(E.td.chi(`Дата и время мероприятия:`), E.td.chi(`22 июня 1927 г. в 18:00`)),
+                E.tr.chi(E.td.chi(`Стоимость входных билетов:`), E.td.chi(`20 коп.`)),
+                E.tr.chi(E.td.chi(`Плата за игру:`), E.td.chi(`50 коп.`)),
+                E.tr.chi(E.td.chi(`Взнос на телеграммы:`), E.td.chi(E.span.chi(`100 руб.`), `21 руб. 16 коп.`)),
+              ),
+            ),
+            E.div.props({class: `info-petition`}).chi(`По всем вопросам обращаться в администрацию к К. Михельсону`)
           ),
         ),
         E.block.chi(
-          E.div.chi(
-            E.h3.chi(`Этапы преображения Васюков`),
+          E.div.props({class: `head-steps`}).chi(
+            E.h3.chi(`Этапы преображения`),
+            E.h3.chi(`Васюков`),
             E.p.chi(`Будущие источники обогащения васюкинцев`)
           ),
-          E.div.chi(
-            E.div.props({}).chi(E.div.props({}).chi(`1`), E.div.chi(`Строительство железнодорожной магистрали Москва-Васюки`)),
-            E.div.props({}).chi(E.div.props({}).chi(`2`), E.div.chi(`Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов`)),
-            E.div.props({}).chi(E.div.props({}).chi(`3`), E.div.chi(`Поднятие сельского хозяйства в радиусе на тысячу километров: производство 
+          E.div.props({class: `steps`}).chi(
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`1`), E.div.props({class: `step-content`}).chi(`Строительство железнодорожной магистрали Москва-Васюки`)),
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`2`), E.div.props({class: `step-content`}).chi(`Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов`)),
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`3`), E.div.props({class: `step-content`}).chi(`Поднятие сельского хозяйства в радиусе на тысячу километров: производство 
               овощей, фруктов, икры, шоколадных конфет`)),
-            E.div.props({}).chi(E.div.props({}).chi(`4`), E.div.chi(`Строительство дворца для турнира`)),
-            E.div.props({}).chi(E.div.props({}).chi(`5`), E.div.chi(`Размещение гаражей для гостевого автотранспорта`)),
-            E.div.props({}).chi(E.div.props({}).chi(`6`), E.div.chi(`Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов`)),
-            E.div.props({}).chi(E.div.props({}).chi(`7`), E.div.chi(`Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов 
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`4`), E.div.props({class: `step-content`}).chi(`Строительство дворца для турнира`)),
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`5`), E.div.props({class: `step-content`}).chi(`Размещение гаражей для гостевого автотранспорта`)),
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`6`), E.div.props({class: `step-content`}).chi(`Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов`)),
+            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`7`), E.div.props({class: `step-content`}).chi(`Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов 
               и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн`), E.img.props({src: `images/jet.png`, alt: `Jet`, class: `jet-img`})),
           )
         ),
@@ -264,8 +276,8 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:title`, content: tit}),
         E.meta.props({property: `og:description`, content: desc}),
         E.meta.props({property: `og:type`, content: `website`}),
-        E.meta.props({property: `og:site_name`, content: `statham.fun`}),
-        E.meta.props({property: `og:url`, content: `https://statham.fun/`}),
+        // E.meta.props({property: `og:site_name`, content: `statham.fun`}),
+        // E.meta.props({property: `og:url`, content: `https://statham.fun/`}),
         E.meta.props({property: `og:image`, content: img}),
         E.meta.props({property: `og:image:height`, content: `600`}),
         E.meta.props({property: `og:image:width`, content: `300`}),
@@ -274,7 +286,7 @@ function Layout(tit, desc, img, ...chi) {
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
-        Md(`./data/anal.md`)
+        // Md(`./data/anal.md`)
       ),
       E.body.chi(chi),
       E.script.props({type: `module`, src: `/browser.mjs`, defer: ``}),
