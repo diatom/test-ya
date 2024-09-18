@@ -6,6 +6,23 @@ console.log(`The site was made by Severin B. https://sirseverin.ru/
 ༼ つ ◕_◕ ༽つ
 `)
 
+// Running Line
+window.addEventListener('load', function() {
+  const runningLine = document.querySelector('.running-line');
+  const lineBlock = document.querySelector('.line-block');
+  const containerWidth = runningLine.offsetWidth;
+  let contentWidth = lineBlock.scrollWidth;
+
+  // Пока ширина контента меньше ширины контейнера, клонируем содержимое
+  while (contentWidth < containerWidth) {
+    const clone = lineBlock.cloneNode(true);
+    runningLine.appendChild(clone);
+    contentWidth += clone.scrollWidth;
+  }
+});
+
+
+
 
 // URL button copy
 document.querySelectorAll('.copy-b').forEach(button => {
@@ -70,78 +87,3 @@ document.querySelector(`.quote-button`).addEventListener(`click`, () => {
   count++
   document.querySelector('.click-count').innerText = count
 })
-
-// Tags button
-// if (window.location.pathname.startsWith('/post') || window.location.pathname === ('/mixology')) {
-//   document.addEventListener('DOMContentLoaded', function() {
-//     const tagsContainer = document.querySelector('tags')
-//     const buttons = tagsContainer.querySelectorAll('button[type="button"]')
-//     const blogDivs = document.querySelectorAll('.filter, .cockt')
-//     const activeTags = new Set()
-
-//     buttons.forEach(button => {
-//       button.addEventListener('click', function() {
-//         const buttonTag = this.innerText.trim().toLowerCase()
-
-//         if (activeTags.has(buttonTag)) {
-//           activeTags.delete(buttonTag)
-//         } else {
-//           activeTags.add(buttonTag)
-//         }
-
-//         blogDivs.forEach(div => {
-//           const divButtons = div.querySelectorAll('arttags button[type="button"]')
-//           const divTags = Array.from(divButtons).map(btn => btn.innerText.trim().toLowerCase())
-
-//           const shouldShow = Array.from(activeTags).every(tag => divTags.includes(tag))
-
-//           if (shouldShow) {
-//             div.style.display = 'block'
-//           } else {
-//             div.style.display = 'none'
-//           }
-//         })
-//       })
-//     })
-//   })
-
-//   document.addEventListener(`DOMContentLoaded`, function() {
-//     var buttons = document.querySelectorAll(`.btn`)
-
-//     buttons.forEach(function(button) {
-//       button.addEventListener(`click`, function() {
-//         button.classList.toggle(`active`)
-//       })
-//     })
-//   })
-// }
-
-// // Search
-// if (window.location.pathname === `/mixology`) {
-//   const searchInput = document.getElementById(`searchInput`)
-//   const searchButton = document.getElementById(`searchButton`)
-
-//   function searchDataBook(input) {
-//     const divs = document.getElementsByClassName(`cockt`)
-//     for (const elem of divb) {
-//       let result = elem.innerHTML.toLowerCase().includes(input)
-//       if (result) {
-//         elem.hidden = false
-//       } else {
-//         elem.hidden = true
-//       } 
-//     }
-//   }
-//   searchButton.addEventListener(`click`, () => {
-//     const userInput = searchInput.value.toLowerCase()
-//     searchDataBook(userInput)
-//   })
-
-//   // Enter click
-//   document.addEventListener(`keydown`, function(event) {
-//     if (event.key === `Enter`) {
-//         document.getElementById(`searchButton`).dispatchEvent(new Event(`click`))
-//         event.preventDefault()
-//     }
-//   })
-// }
