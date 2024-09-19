@@ -314,6 +314,8 @@ block:nth-of-type(3) {
   }
   .step {
     background-color: #EEDEC2;
+    background-image: url('images/back-paper-light.png');
+    // background-size: cover;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -350,6 +352,80 @@ block:nth-of-type(3) {
         right: -40px;
         bottom: 35px;
       }
+  }
+}
+block:nth-of-type(4) {
+  flex-direction: column;
+  align-items: flex-start;
+  .head-players {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-size: 54px;
+      width: 70%;
+      @include merriweather($weight: 400);
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      color: #313131;
+    }
+    .arrow-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .slider-num {
+        margin: 0 14px;
+      }
+      .arrow {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #313131;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 18px;
+        }
+    }
+  }
+  }
+  .slide-players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0;
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h5 {
+        font-size: 24px;
+        margin: 35px 0 20px 0;
+        padding: 0;
+      }
+      div {
+        font-size: 20px;
+        margin: 0 0 24px 0;
+      }
+      button {
+        font-size: 16px;
+        height: 35px;
+        width: 113px;
+        border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #3057A2;
+        color: #3057A2;
+        cursor: pointer;
+      }
+    }
   }
 }
 footer {
