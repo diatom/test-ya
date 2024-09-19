@@ -98,7 +98,7 @@ class PageIndex extends Page {
           E.div.props({class: `img-hey`}).chi(
             E.img.props({src: `images/city.png`, alt: `City`, class: `img-city`}), 
             E.img.props({src: `images/back-paper.png`, alt: `City`, class: `img-paper`}), 
-            E.img.props({src: `images/circle.svg`, alt: `Circle`, class: `img-circle`}),
+            // E.img.props({src: `images/circle.svg`, alt: `Circle`, class: `img-circle`}),
           ),
           E.div.props({class: `hey-main`}).chi(
             E.div.props({class: `logo`}).chi(
@@ -181,9 +181,9 @@ class PageIndex extends Page {
           E.div.props({class: `head-players`}).chi(
             E.h3.chi(`Участники турнира`),
             E.div.props({class: `arrow-buttons`}).chi(
-              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow.svg`, alt: `arrow`})),
+              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
               E.div.props({class: `slider-num`}).chi(`3 / 6`),
-              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow.svg`, alt: `arrow`})),
+              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
             )
           ),
           E.div.props({class: `slide-players`}).chi(
@@ -284,9 +284,9 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
         E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.svg`}),
         E.link.props({rel: `stylesheet`, href: `/main.css`}),
-        E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
+        // E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
-        // Md(`./data/anal.md`)
+        Md(`./data/fonts.md`)
       ),
       E.body.chi(chi),
       E.script.props({type: `module`, src: `/browser.mjs`, defer: ``}),
