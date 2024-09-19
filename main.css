@@ -61,7 +61,7 @@ hey .img-hey {
   padding: 0;
 }
 hey .img-hey .img-city {
-  width: 1604px;
+  width: 100%;
   z-index: 900;
 }
 hey .img-hey .img-paper {
@@ -274,6 +274,24 @@ block:nth-of-type(2) table tbody td:nth-child(1) {
 }
 block:nth-of-type(2) table tbody td:nth-child(2) {
   padding: 19px 0 19px 19px;
+}
+block:nth-of-type(2) table tbody tr td:last-child span {
+  margin-right: 14px;
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+block:nth-of-type(2) table tr td:nth-child(1) {
+  color: #313131;
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+block:nth-of-type(2) table tr td:nth-child(2) {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 block:nth-of-type(2) .info-petition {
   font-size: 20px;
