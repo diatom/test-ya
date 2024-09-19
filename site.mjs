@@ -110,33 +110,31 @@ class PageIndex extends Page {
               E.h1.chi(`в столицу земного шара`),
               E.div.props({class: `greeting-info`}).chi(`Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам`),
               E.div.props({class: `greeting-buttons`}).chi(
-                E.button.props({}).chi(`Поддержать
+                E.button.props({onclick: `location.href='#support'`}).chi(`Поддержать
 шахматную мысль`),
-                E.button.props({}).chi(`Подробнее
+                E.button.props({onclick: `location.href='#steps'`}).chi(`Подробнее
 о турнире`),
               )
             ),
           ),
         ),
-        E.div.props({class: `running-line`}).chi(
+        E.div.props({class: `running-line`, id: `run-line-top`}).chi(
           E.div.props({class: `line-block`}).chi(
-            E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`),
-            E.div.props({class: `circle`}).chi(``),
-            E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`),
-            E.div.props({class: `circle`}).chi(``),
-            E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`),
-            E.div.props({class: `circle`}).chi(``),
+            E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+            E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
           )
         ),
-        // E.div.props({class: `running-line`}).chi(
-        //   E.div.props({class: `line-block`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`),
-        //   E.div.props({class: `circle`}).chi(``),
-        //   E.div.props({class: `line-block`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`),
-        //   E.div.props({class: `circle`}).chi(``),
-        //   E.div.props({class: `line-block`}).chi(`Лед тронулся, господа присяжные заседатели!`),
-        //   E.div.props({class: `circle`}).chi(``),
-        // ),
-        E.block.props({}).chi(
+        E.block.props({id: `support`}).chi(
           E.div.props({class: `block-info-members`}).chi(
             E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
           ),
@@ -159,7 +157,7 @@ class PageIndex extends Page {
             E.div.props({class: `info-petition`}).chi(`По всем вопросам обращаться в администрацию к К. Михельсону`)
           ),
         ),
-        E.block.chi(
+        E.block.props({id: `steps`}).chi(
           E.div.props({class: `head-steps`}).chi(
             E.h3.chi(`Этапы преображения`),
             E.h3.chi(`Васюков`),
@@ -181,61 +179,69 @@ class PageIndex extends Page {
           E.div.props({class: `head-players`}).chi(
             E.h3.chi(`Участники турнира`),
             E.div.props({class: `arrow-buttons`}).chi(
-              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
+              E.button.props({class: `arrow`, id: `arrow-left`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
               E.div.props({class: `slider-num`}).chi(`3 / 6`),
-              E.button.props({class: `arrow`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
+              E.button.props({class: `arrow`, id: `arrow-right`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
             )
           ),
-          E.div.props({class: `slide-players`}).chi(
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Хозе-Рауль Капабланка`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
+          E.div.props({class: `slides-container`}).chi(
+            E.div.props({class: `slide-players`, id: `slide-1`}).chi(
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Хозе-Рауль Капабланка`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Эммануил Ласкер`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Александр Алехин`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
             ),
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Эммануил Ласкер`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
-            ),
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Александр Алехин`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
-            ),
-          ),
-          E.div.props({class: `slide-players`}).chi(
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Арон Нимцович`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
-            ),
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Рихард Рети`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
-            ),
-            E.div.props({class: `avatar`}).chi(
-              E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-              E.h5.chi(`Остап Бендер`),
-              E.div.chi(`Чемпион мира по шахматам`),
-              E.button.props({}).chi(`Подробнее`)
-            ),
+            E.div.props({class: `slide-players`, id: `slide-2`}).chi(
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Арон Нимцович`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Рихард Рети`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
+              E.div.props({class: `avatar`}).chi(
+                E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+                E.h5.chi(`Остап Бендер`),
+                E.div.chi(`Чемпион мира по шахматам`),
+                E.button.props({}).chi(`Подробнее`)
+              ),
+            )
           )
         )
       ),
-      E.div.props({class: `running-line`}).chi(
+      E.div.props({class: `running-line`, id: `run-line-bot`}).chi(
         E.div.props({class: `line-block`}).chi(
-          E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`),
-          E.div.props({class: `circle`}).chi(``),
-          E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`),
-          E.div.props({class: `circle`}).chi(``),
-          E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`),
-          E.div.props({class: `circle`}).chi(``),
+          E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Дело помощи утопающим — дело рук самих утопающих!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Шахматы двигают вперед не только культуру, но и экономику!`, E.div.props({class: `circle`}).chi(``),),
+          E.div.props({class: `line-text`}).chi(`Лед тронулся, господа присяжные заседатели!`, E.div.props({class: `circle`}).chi(``),),
         )
       ),
       Footer(this)
