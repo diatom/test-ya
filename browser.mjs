@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function updateVisibleSlides() {
         const containerWidth = document.querySelector('.slides-container').offsetWidth;
-        if (containerWidth >= 1222) {
+        if (containerWidth >= 1200) {
             visibleSlides = 3; // Если ширина контейнера 1222px или больше
         } else if (containerWidth >= 830) {
             visibleSlides = 2; // Если ширина контейнера от 830px до 1219px
