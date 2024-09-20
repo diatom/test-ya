@@ -111,11 +111,12 @@ hey .greeting .greeting-info {
 hey .greeting .greeting-buttons {
   display: flex;
   justify-content: center;
+  gap: 16px;
 }
 hey .greeting .greeting-buttons button {
   border: 2px solid black;
   border-radius: 40px;
-  width: 205px;
+  width: 50%;
   padding: 0;
   margin: 0;
   height: 68px;
@@ -132,8 +133,6 @@ hey .greeting .greeting-buttons button {
 hey .greeting .greeting-buttons button:nth-of-type(2) {
   background: none;
   color: #1F1F1F;
-  width: 321px;
-  margin: 0 0 0 16px;
 }
 
 .running-line {
@@ -428,19 +427,21 @@ block:nth-of-type(4) .head-players .arrow-buttons .arrow img {
   width: 100%;
   height: 18px;
 }
-block:nth-of-type(4) .slide-players.hidden {
-  display: none;
-}
 block:nth-of-type(4) .slides-container {
   overflow: hidden;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  position: relative;
+}
+block:nth-of-type(4) .slides-container .slides-wrap {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
 }
 block:nth-of-type(4) .slides-container .slide-players {
-  width: 100vh;
+  min-width: 33%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 80px 0;
   transition: transform 0.5s ease;
 }
