@@ -134,7 +134,10 @@ class PageIndex extends Page {
         ),
         E.block.props({id: `support`}).chi(
           E.div.props({class: `block-info-members`}).chi(
-            E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир `),
+            E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир `),
+            E.h4.props({}).chi(`посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
+          ),
+          E.div.props({class: `block-info-members`}).chi(
             E.h4.props({}).chi(`посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
           ),
           E.img.props({src: `images/members.png`, alt: `Members`, class: `img-members`}),
@@ -158,7 +161,7 @@ class PageIndex extends Page {
         ),
         E.block.props({id: `steps`}).chi(
           E.div.props({class: `head-steps`}).chi(
-            E.h3.chi(`Этапы преображения`),
+            E.h3.chi(`Этапы преображения`),
             E.h3.chi(`Васюков`),
             E.p.chi(`Будущие источники обогащения васюкинцев`)
           ),

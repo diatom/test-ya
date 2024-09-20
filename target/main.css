@@ -13,11 +13,6 @@ body {
   color: #313131;
 }
 
-header, footer, nav, a {
-  display: flex;
-  text-decoration: none;
-}
-
 main {
   display: flex;
   width: 100%;
@@ -81,7 +76,7 @@ hey .greeting {
 hey .greeting h1 {
   font-size: 60px;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.2;
   color: #313131;
   margin: 0;
   padding: 0;
@@ -109,7 +104,7 @@ hey .greeting .greeting-buttons button {
   padding: 0;
   margin: 0;
   height: 68px;
-  background: black;
+  background: #1F1F1F;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -178,19 +173,23 @@ hey .greeting .greeting-buttons button:nth-of-type(2) {
 }
 block {
   width: 1222px;
-  max-width: 90%;
   height: auto;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   margin: 80px 0;
 }
-block .block-info-members {
-  width: 60%;
+
+block:nth-of-type(1) {
+  display: flex;
 }
-block .block-info-members h4 {
+block:nth-of-type(1) .block-info-members {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+block:nth-of-type(1) .block-info-members h4 {
   font-size: 36px;
   font-family: "Merriweather", serif;
   font-weight: 400;
@@ -200,13 +199,16 @@ block .block-info-members h4 {
   padding: 0;
   display: inline;
 }
-block .block-info-members h4 span {
+block:nth-of-type(1) .block-info-members h4 span {
   color: red;
   font-family: "Merriweather", serif;
   font-weight: 700;
   font-style: normal;
 }
-block .img-members {
+block:nth-of-type(1) .block-info-members:nth-of-type(2) {
+  display: none;
+}
+block:nth-of-type(1) .img-members {
   max-width: 394px;
   width: 35%;
   height: auto;
@@ -465,34 +467,40 @@ block:nth-of-type(4) .slides-container .slide-players .avatar button {
 }
 
 footer {
-  flex-wrap: wrap;
-  height: 150px;
-  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 150px;
+  width: 100%;
   background: #E9DED4;
   color: #313131;
   font-size: 16px;
 }
 footer div {
-  display: flex;
-  flex-direction: column;
-  width: 1222px;
-}
-
-.jet-img {
+  max-width: 1222px;
   width: 100%;
 }
 
 @media screen and (max-width: 1250px) {
+  main {
+    display: block;
+  }
   hey {
     min-height: 1100px;
   }
   hey .hey-main {
     margin: 26px 20px;
   }
+  hey .hey-main .img-city {
+    width: 1600px;
+  }
   hey .hey-main .greeting {
     width: 100%;
+    margin: 50px 0 0 0;
+  }
+  hey .hey-main .greeting .greeting-info {
+    margin: 40px 0 37px 0;
+    text-align: left;
   }
   hey .hey-main .greeting h1 {
     font-size: 36px;
@@ -503,18 +511,91 @@ footer div {
   }
   hey .hey-main .greeting .greeting-buttons button {
     width: 100%;
+    border: none;
+  }
+  hey .hey-main .greeting .greeting-buttons button:nth-of-type(2) {
+    background-color: rgba(255, 255, 255, 0.8);
   }
   hey .img-hey {
     left: 40%;
     transform: translateX(-60%);
   }
-  block .block-info-members h4 {
+  block {
+    max-width: 1222px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: 0;
+    align-items: start;
+  }
+  block:nth-of-type(1) {
+    display: grid;
+    margin: 70px 0 43px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+  }
+  block:nth-of-type(1) .block-info-members h4 {
     font-size: 28px;
+  }
+  block:nth-of-type(1) .img-members {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 33px 0;
+  }
+  block:nth-of-type(1) .block-info-members:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  block:nth-of-type(1) .block-info-members:nth-of-type(1) h4:nth-of-type(2) {
+    display: none;
+  }
+  block:nth-of-type(1) .block-info-members:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+    display: block;
+  }
+  block:nth-of-type(1) .block-info-members:nth-of-type(2) span {
+    display: block;
+  }
+  block:nth-of-type(2) {
+    flex-direction: column;
+  }
+  block:nth-of-type(2) .block-info-member h4 {
+    font-size: 28px;
+  }
+  block:nth-of-type(2) .img-member {
+    width: 100%;
+    margin: 0;
+  }
+  block:nth-of-type(3) {
+    margin: 125px 0;
+  }
+  block:nth-of-type(3) .head-steps h3 {
+    font-size: 36px;
+    width: 100%;
+  }
+  block:nth-of-type(3) .head-steps p {
+    display: block;
+    margin: 24px 0 0 0;
+    padding: 0;
+  }
+  block:nth-of-type(4) {
+    margin: 0 0 100px 0;
+  }
+  block:nth-of-type(4) .head-players h3 {
+    font-size: 36px;
   }
   footer {
     width: 100%;
+    display: block;
   }
   footer div {
+    display: block;
     margin: 40px 20px 60px 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  hey {
+    min-height: 1200px;
   }
 }
