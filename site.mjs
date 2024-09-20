@@ -97,8 +97,6 @@ class PageIndex extends Page {
         E.hey.chi(
           E.div.props({class: `img-hey`}).chi(
             E.img.props({src: `images/city.png`, alt: `City`, class: `img-city`}), 
-            E.img.props({src: `images/back-paper.png`, alt: `City`, class: `img-paper`}), 
-            // E.img.props({src: `images/circle.svg`, alt: `Circle`, class: `img-circle`}),
           ),
           E.div.props({class: `hey-main`}).chi(
             E.div.props({class: `logo`}).chi(
@@ -136,7 +134,8 @@ class PageIndex extends Page {
         ),
         E.block.props({id: `support`}).chi(
           E.div.props({class: `block-info-members`}).chi(
-            E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
+            E.h4.props({}).chi(`Чтобы поддержать Международный васюкинский турнир `),
+            E.h4.props({}).chi(`посетите лекцию на тему:`, E.span.chi(` «Плодотворная дебютная идея»`)),
           ),
           E.img.props({src: `images/members.png`, alt: `Members`, class: `img-members`}),
         ),

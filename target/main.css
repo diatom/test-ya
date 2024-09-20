@@ -35,8 +35,9 @@ hey {
   margin: 0;
   align-items: center;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   background-color: #E9DED4;
+  overflow: hidden;
 }
 hey .logo {
   display: flex;
@@ -50,10 +51,12 @@ hey .logo div {
   color: #595653;
 }
 hey .img-hey {
-  width: 100%;
+  width: auto;
+  height: auto;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -61,28 +64,14 @@ hey .img-hey {
   padding: 0;
 }
 hey .img-hey .img-city {
-  width: 100%;
+  width: 1920px;
   z-index: 900;
 }
-hey .img-hey .img-paper {
-  width: 100%;
-  opacity: 0.2;
-  z-index: 800;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-}
-hey .img-hey .img-circle {
-  width: 660px;
-  height: 660px;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  z-index: 700;
-}
 hey .hey-main {
-  width: 1222px;
-  margin: 29px 0 0 0;
+  position: relative;
+  max-width: 1222px;
+  width: 100%;
+  margin: 28px 0 0 0;
   z-index: 1000;
 }
 hey .greeting {
@@ -209,6 +198,7 @@ block .block-info-members h4 {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  display: inline;
 }
 block .block-info-members h4 span {
   color: red;
@@ -438,7 +428,7 @@ block:nth-of-type(4) .slides-container .slides-wrap {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  gap: 20px;
+  gap: 10px;
   transition: transform 0.5s ease;
 }
 block:nth-of-type(4) .slides-container .slide-players {
@@ -494,105 +484,37 @@ footer div {
   width: 100%;
 }
 
-.error {
-  display: flex;
-  width: 40em;
-  margin: 1em 0 0 0;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: black;
-}
-.error img {
-  border-radius: 10px;
-}
-
-.error:hover {
-  text-decoration: underline 1px solid white;
-}
-
 @media screen and (max-width: 1250px) {
-  header, footer {
-    max-width: 90%;
+  hey {
+    min-height: 1100px;
   }
-  footer div {
+  hey .hey-main {
+    margin: 26px 20px;
+  }
+  hey .hey-main .greeting {
+    width: 100%;
+  }
+  hey .hey-main .greeting h1 {
+    font-size: 36px;
+    width: 100%;
+  }
+  hey .hey-main .greeting .greeting-buttons {
     flex-direction: column;
   }
-  footer nav {
-    flex-direction: row;
-  }
-  footer nav a {
-    padding: 0.3rem;
-  }
-  hey {
-    width: 500px;
-    max-width: 90%;
-  }
-  block {
-    width: 1600px;
-    max-width: 90%;
-  }
-}
-@media screen and (max-width: 860px) {
-  hey {
-    width: 90%;
-    margin-bottom: 0;
-    flex-direction: column;
-  }
-  hey .greeting {
-    max-width: 100%;
-    margin: 0 0 2em 0;
-  }
-  hey .greeting h3 {
-    margin: 3em 0 0 0;
-  }
-  hey h1 {
-    font-size: 1.8em;
-    max-width: 100%;
-    margin: 2em 0;
+  hey .hey-main .greeting .greeting-buttons button {
+    width: 100%;
   }
   hey .img-hey {
-    width: 100%;
-    margin: 0 0 2em 0;
+    left: 40%;
+    transform: translateX(-60%);
   }
-  .error {
-    width: 90%;
-    padding: 0;
-  }
-  .error img {
-    width: 100%;
-  }
-  block {
-    flex-direction: column;
+  block .block-info-members h4 {
+    font-size: 28px;
   }
   footer {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 20px;
-    padding: 2em 0;
-    margin: 5em 0 2em 0;
+    width: 100%;
   }
-  footer img {
-    margin: 2em 2em;
-  }
-  footer p {
-    width: 80%;
-    text-align: center;
-  }
-  footer div, footer nav {
-    margin: 0 0;
-  }
-  footer nav {
-    flex-direction: column;
-  }
-  footer a {
-    justify-content: center;
-    text-align: center;
-  }
-  form label {
-    padding: 2px 4px;
+  footer div {
+    margin: 40px 20px 60px 20px;
   }
 }
