@@ -1,32 +1,6 @@
 import * as p from 'https://cdn.jsdelivr.net/npm/@mitranim/js@0.1.25/prax.mjs'
 const {E} = p.Ren.native()
-console.log(`The site was made by Severin B. https://sirseverin.ru/
-༼ つ ◕_◕ ༽つ
-`)
 
-// Running Line
-// window.addEventListener('load', function() {
-//   const runningLineT = document.getElementById('run-line-top')
-//   const lineBlock = document.querySelector('.line-block')
-//   let totalWidth = 0
-//   const lineBlockWidth = lineBlock.offsetWidth
-//   while (totalWidth < runningLineT.offsetWidth * 3) {
-//       const clone = lineBlock.cloneNode(true)
-//       runningLineT.appendChild(clone)
-//       totalWidth += lineBlockWidth
-//   }
-// })
-// window.addEventListener('load', function() {
-//   const runningLineB = document.getElementById('run-line-bot')
-//   const lineBlock = document.querySelector('.line-block')
-//   let totalWidth = 0
-//   const lineBlockWidth = lineBlock.offsetWidth
-//   while (totalWidth < runningLineB.offsetWidth * 3) {
-//       const clone = lineBlock.cloneNode(true)
-//       runningLineB.appendChild(clone)
-//       totalWidth += lineBlockWidth
-//   }
-// })
 
 let currentSlide = 0; // Начинаем с первого слайда
 const slides = document.querySelectorAll('.slide-players'); // Получаем все слайды
