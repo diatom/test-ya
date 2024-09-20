@@ -131,10 +131,11 @@ hey {
     .greeting-buttons {
       display: flex;
       justify-content: center;
+      gap: 16px;
       button {
         border: 2px solid black;
         border-radius: 40px;
-        width: 205px;
+        width: 50%;
         padding: 0;
         margin: 0;
         height: 68px; 
@@ -148,8 +149,6 @@ hey {
       button:nth-of-type(2) {
         background: none;
         color: #1F1F1F;
-        width: 321px;
-        margin: 0 0 0 16px;
       }
     }
   }
@@ -419,18 +418,22 @@ block:nth-of-type(4) {
       }
     }
   }
-  .slide-players.hidden {
-    display: none;
-  }
   .slides-container {
     overflow: hidden;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    .slide-players {
-      width: 100vh;
+    position: relative;
+    .slides-wrap {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      transition: transform 0.5s ease;
+    }
+    .slide-players {
+      min-width: 33%;
+      // flex: 0 0 var(--slide-width);
+      display: flex;
+      justify-content: space-around;
+      // justify-content: center;
       margin: 80px 0;
       transition: transform 0.5s ease;
       .avatar {

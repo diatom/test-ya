@@ -185,6 +185,7 @@ class PageIndex extends Page {
             )
           ),
           E.div.props({class: `slides-container`}).chi(
+          E.div.props({class: `slides-wrap`}).chi(
             E.div.props({class: `slide-players`, id: `slide-1`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
@@ -192,12 +193,16 @@ class PageIndex extends Page {
                 E.div.chi(`Чемпион мира по шахматам`),
                 E.button.props({}).chi(`Подробнее`)
               ),
+            ),
+            E.div.props({class: `slide-players`, id: `slide-2`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
                 E.h5.chi(`Эммануил Ласкер`),
                 E.div.chi(`Чемпион мира по шахматам`),
                 E.button.props({}).chi(`Подробнее`)
               ),
+            ),
+            E.div.props({class: `slide-players`, id: `slide-3`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
                 E.h5.chi(`Александр Алехин`),
@@ -205,19 +210,23 @@ class PageIndex extends Page {
                 E.button.props({}).chi(`Подробнее`)
               ),
             ),
-            E.div.props({class: `slide-players`, id: `slide-2`}).chi(
+            E.div.props({class: `slide-players`, id: `slide-4`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
                 E.h5.chi(`Арон Нимцович`),
                 E.div.chi(`Чемпион мира по шахматам`),
                 E.button.props({}).chi(`Подробнее`)
               ),
+            ),
+            E.div.props({class: `slide-players`, id: `slide-5`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
                 E.h5.chi(`Рихард Рети`),
                 E.div.chi(`Чемпион мира по шахматам`),
                 E.button.props({}).chi(`Подробнее`)
               ),
+            ),
+            E.div.props({class: `slide-players`, id: `slide-6`}).chi(
               E.div.props({class: `avatar`}).chi(
                 E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
                 E.h5.chi(`Остап Бендер`),
@@ -225,7 +234,50 @@ class PageIndex extends Page {
                 E.button.props({}).chi(`Подробнее`)
               ),
             )
-          )
+          ))
+          // E.div.props({class: `slides-container`}).chi(
+          // E.div.props({class: `slides-wrap`}).chi(
+          //   E.div.props({class: `slide-players`, id: `slide-1`}).chi(
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Хозе-Рауль Капабланка`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Эммануил Ласкер`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Александр Алехин`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //   ),
+          //   E.div.props({class: `slide-players`, id: `slide-2`}).chi(
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Арон Нимцович`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Рихард Рети`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //     E.div.props({class: `avatar`}).chi(
+          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
+          //       E.h5.chi(`Остап Бендер`),
+          //       E.div.chi(`Чемпион мира по шахматам`),
+          //       E.button.props({}).chi(`Подробнее`)
+          //     ),
+          //   )
+          // ))
         )
       ),
       E.div.props({class: `running-line`, id: `run-line-bot`}).chi(
