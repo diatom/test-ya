@@ -180,7 +180,7 @@ class PageIndex extends Page {
             E.img.props({src: `images/jet.png`, alt: `Jet`, class: `jet-img`})
           ),
           E.div.props({class: `step-nav`}).chi(
-            E.button.props({class: `step-arrow`, id: `step-arrow-left`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
+            E.button.props({class: `active-arrow`, id: `step-arrow-left`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
             E.div.props({class: `step-dots`}).chi(
               E.div.props({class: `step-dot`, id: `dot-1`}),
               E.div.props({class: `step-dot`, id: `dot-2`}),
@@ -188,7 +188,7 @@ class PageIndex extends Page {
               E.div.props({class: `step-dot`, id: `dot-4`}),
               E.div.props({class: `step-dot`, id: `dot-5`}),
             ),
-            E.button.props({class: `step-arrow`, id: `step-arrow-right`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
+            E.button.props({class: `active-arrow`, id: `step-arrow-right`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
           )
         ),
         E.block.props({}).chi(
