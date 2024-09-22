@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
             visibleSlides = 2 // Если ширина контейнера от 830px до 1219px
         } else if (containerWidth >= 394) {
             visibleSlides = 1 // Если ширина контейнера от 420px до 829px
-        } 
+        } else {
+            visibleSlides = 1
+        }
     }
 
     // Инициализация при загрузке страницы

@@ -99,7 +99,7 @@ hey .greeting .greeting-buttons {
   gap: 16px;
 }
 hey .greeting .greeting-buttons button {
-  border: 2px solid black;
+  border: 2px solid #1F1F1F;
   border-radius: 40px;
   width: 50%;
   padding: 0;
@@ -115,9 +115,19 @@ hey .greeting .greeting-buttons button {
   font-weight: 500;
   font-style: normal;
 }
+hey .greeting .greeting-buttons button:hover {
+  background-color: #FBCE51;
+  color: black;
+  border: 2px solid #FBCE51;
+}
 hey .greeting .greeting-buttons button:nth-of-type(2) {
   background: none;
   color: #1F1F1F;
+}
+hey .greeting .greeting-buttons button:nth-of-type(2):hover {
+  background-color: #1F1F1F;
+  color: white;
+  border: 2px solid #1F1F1F;
 }
 
 .running-line {
@@ -408,7 +418,7 @@ block:nth-of-type(3) .step-nav .step-dots .step-dot {
   border-radius: 50%;
   background: #D9D9D9;
 }
-block:nth-of-type(3) .step-nav .step-arrow {
+block:nth-of-type(3) .step-nav .active-arrow {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -421,9 +431,12 @@ block:nth-of-type(3) .step-nav .step-arrow {
   border: none;
   cursor: pointer;
 }
-block:nth-of-type(3) .step-nav .step-arrow img {
+block:nth-of-type(3) .step-nav .active-arrow img {
   width: 100%;
   height: 18px;
+}
+block:nth-of-type(3) .step-nav .active-arrow:hover {
+  background-color: #FBCE51;
 }
 
 block:nth-of-type(4) {
@@ -473,6 +486,9 @@ block:nth-of-type(4) .arrow-buttons .arrow img {
   width: 100%;
   height: 18px;
 }
+block:nth-of-type(4) .arrow-buttons .arrow:hover {
+  background-color: #FBCE51;
+}
 block:nth-of-type(4) .slides-container {
   width: 94%;
   overflow: hidden;
@@ -490,7 +506,6 @@ block:nth-of-type(4) .slides-container .slides-wrap {
   transition: transform 0.5s ease;
 }
 block:nth-of-type(4) .slides-container .slide-players {
-  width: 394px;
   display: flex;
   justify-content: space-around;
   margin: 80px 0;
@@ -520,6 +535,10 @@ block:nth-of-type(4) .slides-container .slide-players .avatar button {
   border: 1px solid #3057A2;
   color: #3057A2;
   cursor: pointer;
+}
+block:nth-of-type(4) .slides-container .slide-players .avatar button:hover {
+  background-color: #3057A2;
+  color: white;
 }
 
 footer {
@@ -568,8 +587,18 @@ footer div {
     width: 45%;
     border: none;
   }
+  hey .hey-main .greeting .greeting-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #1F1F1F;
+    color: black;
+  }
   hey .hey-main .greeting .greeting-buttons button:nth-of-type(2) {
     background-color: rgba(255, 255, 255, 0.8);
+  }
+  hey .hey-main .greeting .greeting-buttons button:nth-of-type(2):hover {
+    background-color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+    color: white;
   }
   hey .img-hey {
     left: 40%;
@@ -818,6 +847,18 @@ footer div {
   block:nth-of-type(4) .slides-container {
     grid-column: 1/4;
     grid-row: 2;
-    width: 394px;
+    max-width: 335px;
+    width: 100%;
+  }
+  block:nth-of-type(4) .slides-container .slides-wrap {
+    display: grid;
+    grid-template-columns: repeat(6, 335px);
+    grid-template-rows: 1fr;
+  }
+  block:nth-of-type(4) .slides-container .slides-wrap .avatar {
+    width: 335px;
+  }
+  block:nth-of-type(4) .slides-container .slides-wrap .avatar img {
+    width: 244px;
   }
 }
