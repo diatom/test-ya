@@ -168,25 +168,25 @@ class PageIndex extends Page {
             E.p.chi(`Будущие источники обогащения васюкинцев`)
           ),
           E.div.props({class: `steps`}).chi(
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`1`), E.div.props({class: `step-content`}).chi(`Строительство железнодорожной магистрали Москва-Васюки`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`2`), E.div.props({class: `step-content`}).chi(`Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`3`), E.div.props({class: `step-content`}).chi(`Поднятие сельского хозяйства в радиусе на тысячу километров: производство 
+            E.div.props({class: `step`, id: `step-1`}).chi(E.div.props({class: `step-num`}).chi(`1`), E.div.props({class: `step-content`}).chi(`Строительство железнодорожной магистрали Москва-Васюки`)),
+            E.div.props({class: `step`, id: `step-2`}).chi(E.div.props({class: `step-num`}).chi(`2`), E.div.props({class: `step-content`}).chi(`Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов`)),
+            E.div.props({class: `step`, id: `step-3`}).chi(E.div.props({class: `step-num`}).chi(`3`), E.div.props({class: `step-content`}).chi(`Поднятие сельского хозяйства в радиусе на тысячу километров: производство 
               овощей, фруктов, икры, шоколадных конфет`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`4`), E.div.props({class: `step-content`}).chi(`Строительство дворца для турнира`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`5`), E.div.props({class: `step-content`}).chi(`Размещение гаражей для гостевого автотранспорта`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`6`), E.div.props({class: `step-content`}).chi(`Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов`)),
-            E.div.props({class: `step`}).chi(E.div.props({class: `step-num`}).chi(`7`), E.div.props({class: `step-content`}).chi(`Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов 
+            E.div.props({class: `step`, id: `step-4`}).chi(E.div.props({class: `step-num`}).chi(`4`), E.div.props({class: `step-content`}).chi(`Строительство дворца для турнира`)),
+            E.div.props({class: `step`, id: `step-5`}).chi(E.div.props({class: `step-num`}).chi(`5`), E.div.props({class: `step-content`}).chi(`Размещение гаражей для гостевого автотранспорта`)),
+            E.div.props({class: `step`, id: `step-6`}).chi(E.div.props({class: `step-num`}).chi(`6`), E.div.props({class: `step-content`}).chi(`Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов`)),
+            E.div.props({class: `step`, id: `step-7`}).chi(E.div.props({class: `step-num`}).chi(`7`), E.div.props({class: `step-content`}).chi(`Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов 
               и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн`), ),
             E.img.props({src: `images/jet.png`, alt: `Jet`, class: `jet-img`})
           ),
           E.div.props({class: `step-nav`}).chi(
             E.button.props({class: `step-arrow`, id: `step-arrow-left`}).chi(E.img.props({src: `images/arrow-left.svg`, alt: `arrow`})),
             E.div.props({class: `step-dots`}).chi(
-              E.div.props({class: `step-dot`}),
-              E.div.props({class: `step-dot`}),
-              E.div.props({class: `step-dot`}),
-              E.div.props({class: `step-dot`}),
-              E.div.props({class: `step-dot`}),
+              E.div.props({class: `step-dot`, id: `dot-1`}),
+              E.div.props({class: `step-dot`, id: `dot-2`}),
+              E.div.props({class: `step-dot`, id: `dot-3`}),
+              E.div.props({class: `step-dot`, id: `dot-4`}),
+              E.div.props({class: `step-dot`, id: `dot-5`}),
             ),
             E.button.props({class: `step-arrow`, id: `step-arrow-right`}).chi(E.img.props({src: `images/arrow-right.svg`, alt: `arrow`})),
           )
