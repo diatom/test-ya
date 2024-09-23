@@ -28,6 +28,9 @@ $hover-scale: 1.03;
   -webkit-transform: scale($scale);
   transform: scale($scale);
 }
+html {
+  scroll-behavior: smooth; 
+}
 body {
   padding: 0 0;
   margin: 0;
@@ -63,6 +66,8 @@ hey {
     display: flex;
     flex-direction: row;
     text-transform: uppercase;
+    text-decoration: none;
+
     div {
       width: 146px;
       font-weight: 800;
