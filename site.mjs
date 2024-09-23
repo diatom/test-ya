@@ -313,7 +313,7 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:image:width`, content: `300`}),
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
         E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.svg`}),
-        E.link.props({rel: `stylesheet`, href: `/main.css`}),
+        // E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.link.props({rel: `stylesheet`, href: `/mainya.css`}),
         // E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),
