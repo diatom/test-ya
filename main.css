@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0 0;
   margin: 0;
@@ -39,6 +43,7 @@ hey .logo {
   display: flex;
   flex-direction: row;
   text-transform: uppercase;
+  text-decoration: none;
 }
 hey .logo div {
   width: 146px;
