@@ -68,7 +68,7 @@ class Page404 extends Page {
   body() {
     const tit = `Ошбика: 404`
     const desc = `Ошбика 404`
-    const img = `https://statham.fun/images/statham.png`
+    const img = `https://sirseverin.ru/test-ya/images/city.png`
     return Layout(tit, desc, img,
       E.main.chi(
         E.a.props({href: `/`, class: `error`}).chi(
@@ -90,7 +90,7 @@ class PageIndex extends Page {
   body() {
   const tit = `Клуб четырёх коней`
   const desc = `Сайт международного Васюкинского турнира по шахматам`
-  const img = `https://statham.fun/images/statham.png`
+  const img = `https://sirseverin.ru/test-ya/images/city.png`
     return Layout(tit, desc, img,
       // Nav(this),
       E.main.chi(
