@@ -119,6 +119,9 @@ hey .greeting .greeting-buttons button {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 hey .greeting .greeting-buttons button:hover {
   background-color: #FBCE51;
