@@ -2,7 +2,7 @@ MAKEFLAGS := --silent --always-make
 PAR := $(MAKE) -j 128
 TAR := target
 STATIC := static
-SASS := sass --no-source-map main.scss:$(TAR)/main.css
+SASS := sass --no-source-map mainya.scss:$(TAR)/main.css
 DENO := deno run -A --no-check
 
 $(info $(OS))
