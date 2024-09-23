@@ -73,10 +73,8 @@ class Page404 extends Page {
       E.main.chi(
         E.a.props({href: `/`, class: `error`}).chi(
           E.h1.chi(this.title()),
-          E.img.props({alt: `404`, src: `/images/statham.png`, class: `error`})
         )        
       ),
-      Footer(this)
     )
   }
 }
@@ -252,49 +250,6 @@ class PageIndex extends Page {
               )
             )
           )
-          // E.div.props({class: `slides-container`}).chi(
-          // E.div.props({class: `slides-wrap`}).chi(
-          //   E.div.props({class: `slide-players`, id: `slide-1`}).chi(
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Хозе-Рауль Капабланка`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Эммануил Ласкер`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Александр Алехин`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //   ),
-          //   E.div.props({class: `slide-players`, id: `slide-2`}).chi(
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Арон Нимцович`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Рихард Рети`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //     E.div.props({class: `avatar`}).chi(
-          //       E.img.props({src: `images/avatar.svg`, alt: `Avatar`}),
-          //       E.h5.chi(`Остап Бендер`),
-          //       E.div.chi(`Чемпион мира по шахматам`),
-          //       E.button.props({}).chi(`Подробнее`)
-          //     ),
-          //   )
-          // ))
         )
       ),
       E.div.props({class: `running-line`, id: `run-line-bot`}).chi(
@@ -358,7 +313,7 @@ function Layout(tit, desc, img, ...chi) {
         E.meta.props({property: `og:image:width`, content: `300`}),
         E.meta.props({property: `og:image:type`, content: `image/jpeg`}),
         E.link.props({rel: `icon`, type: `image/x-icon`, href: `/images/icon.svg`}),
-        // E.link.props({rel: `stylesheet`, href: `/main.css`}),
+        E.link.props({rel: `stylesheet`, href: `/main.css`}),
         E.link.props({rel: `stylesheet`, href: `/mainya.css`}),
         // E.style.chi(`@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');`),
         a.vac(DEV) && E.script.chi(`navigator.serviceWorker.register('/sw.mjs')`),

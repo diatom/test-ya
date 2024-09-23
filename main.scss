@@ -137,6 +137,9 @@ hey {
         cursor: pointer;
         white-space: pre-line;
         @include golos-text($weight: 500);
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       button:hover {
         background-color: #FBCE51;
